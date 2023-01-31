@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Official website of Enactus SMIT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Make changes only in the dev branch. Main branch is for production releases only.
 
 ## Available Scripts
 
