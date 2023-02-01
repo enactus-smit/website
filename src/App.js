@@ -1,9 +1,11 @@
 import React from "react";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="h-screen w-screen">
-      <Nav />
+    <div className="h-screen w-auto">
+      <header className="">
+        <Header />
+      </header>
     </div>
   );
 }
