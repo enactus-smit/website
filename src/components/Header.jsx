@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import logo from "../imgs/Enactus_Full_Color_logo.png"
 import logoSmit from "../imgs/smit_logo.png"
 import { useNavigate } from 'react-router-dom';
@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
-  const navigate = useNavigate();
-  
+
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
@@ -38,7 +38,7 @@ const Header = () => {
       <nav className="flex justify-center">
         <ul className="hidden md:flex md:px-2 lg:px-6 space-x-6 font-medium text-md
           lg:space-x-12">
-          <li className="nav-item" onClick={navigate={('/Events')}}><a href="/">Home</a></li>
+          <li className="nav-item"><a href="/">Home</a></li>
           <li className="nav-item"><a href="/">Team 2022-2023</a></li>
           <li className="nav-item"><a href="/">Events</a></li>
           <li className="nav-item"><a href="/">Our Projects</a></li>
@@ -52,6 +52,6 @@ const Header = () => {
       </div>
     </div>
   )
-}
+};
 
 export default Header
