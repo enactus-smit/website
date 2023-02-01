@@ -23,12 +23,12 @@ const Header = () => {
         <ul className="hidden md:flex md:px-2 lg:px-6 space-x-6 font-medium text-md
           lg:space-x-12">
           <li className="nav-item"><a href="/">Home</a></li>
-          <li className="nav-item"><a href="/constitution">Team 2022-2023</a></li>
-          <li className="nav-item"><a href="/contact">Events</a></li>
-          <li className="nav-item"><a href="/partners">Our Projects</a></li>
-          <li className="nav-item"><a href="/partners">Our Goals</a></li>
-          <li className="nav-item"><a href="/partners">Contact Us</a></li>
-          <li className="nav-item"><a href="/partners">Collaborations</a></li>
+          <li className="nav-item"><a href="/">Team 2022-2023</a></li>
+          <li className="nav-item"><a href="/">Events</a></li>
+          <li className="nav-item"><a href="/">Our Projects</a></li>
+          <li className="nav-item"><a href="/">Our Goals</a></li>
+          <li className="nav-item"><a href="/">Contact Us</a></li>
+          <li className="nav-item"><a href="/">Collaborations</a></li>
         </ul>
       </nav>
       <div className=" bg-yellow-400 w-full overflow-hidden h-2 mt-2">
