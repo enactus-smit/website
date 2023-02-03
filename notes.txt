@@ -1,0 +1,21 @@
+//Refer enactussrcc.com
+
+pattern for background
+Navbar
+    Home page 
+        About Us 
+        Who are we / What we do/ =>slide show
+        Testimonials
+    Team 2022-2023
+    Events page with a heading
+        => Vertical Timeline with descriptions on the right
+    Our Projects
+    Our goals
+        intro
+        17 sustainable goals
+    Contact Us
+        with pic of smit and overlay of enactus logo
+    Collaborations //make items clickable with link
+        iasce
+        coffee break
+        another from college
