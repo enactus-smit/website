@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import logo from "../imgs/Enactus_Full_Color_logo.png"
 import logoSmit from "../imgs/smit_logo.png"
-import { useNavigate } from 'react-router-dom';
+//import { BroweserRouter, Routes, Route } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
-
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
