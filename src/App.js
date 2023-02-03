@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import Team from "./Team";
-import Events from "./Events";
-import Projects from "./Projects";
-import Goals from "./Goals";
-import Contact from "./Contact";
-import Collaborations from "./Collaborations";
+import Home from "./pages/Home";
+import Team from "./pages/Team";
+import Events from "./pages/Events";
+import Projects from "./pages/Projects";
+import Goals from "./pages/Goals";
+import Contact from "./pages/Contact";
+import Collaborations from "./pages/Collaborations";
+
 function App() {
   return (
-      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
@@ -19,7 +19,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/collaborations" element={<Collaborations />} />
       </Routes>
-    </BrowserRouter>
   );
 }
 
