@@ -24,3 +24,4 @@
 .nav-item {
     @apply text-slate-800 hover:text-slate-600 transition duration-[.4s] cursor-pointer;
 }
+

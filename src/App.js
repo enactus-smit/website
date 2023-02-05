@@ -11,7 +11,7 @@ import Collaborations from "./pages/Collaborations";
 function App() {
   return (
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" exact element={<Home />} />
         <Route path="/team" element={<Team />} />
         <Route path="/events" element={<Events />} />
         <Route path="/projects" element={<Projects />} />
