@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 @layer base {
 
@@ -10,9 +12,13 @@
 
     body {
         overflow-x: hidden;
+        font-family: 'Source Sans Pro', sans-serif;
     @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-amber-500 !scrollbar-thumb-rounded-lg
             flex flex-col min-h-screen;
     
+    }
+    .h {
+        font-family: 'Poppins', sans-serif;
     }
 }
 .nav-item {
