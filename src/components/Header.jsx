@@ -44,7 +44,7 @@ const Header = () => {
       <nav className="flex justify-center">
         <ul className="hidden md:flex md:px-2 lg:px-6 space-x-6 font-medium text-md
           lg:space-x-12">
-          <li className="nav-item" onClick={() => routeChange("/home")}>Home</li>
+          <li className="nav-item" onClick={() => routeChange("/")}>Home</li>
           <li className="nav-item" onClick={() => routeChange("/team")}>Team 2022-2023</li>
           <li className="nav-item" onClick={() => routeChange("/events")}>Events</li>
           <li className="nav-item" onClick={() => routeChange("/projects")}>Our Projects</li>
