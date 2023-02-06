@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+    <div className="sticky top-0 z-50">
       <Header />
+    </div>
       <App />
     </BrowserRouter>
   </React.StrictMode>

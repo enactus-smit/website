@@ -3,7 +3,7 @@ import encSmit from "../imgs/Enactus-SMIT-white.png"
 
 const Home = () => {
   return (
-    <main className="mx-16">
+    <main className="mx-16 h-screen w-auto">
       <section>
         <div className="flex justify-center items-center py-10">
         <img
@@ -18,8 +18,8 @@ const Home = () => {
 
       {/*About us */}
 
-      <section className="relative grid grid-cols-2 gap-10">
-        <article className="flex flex-col z-50">
+      <section className=" grid grid-cols-2 md:gap-2 lg:gap-10 ">
+        <article className="flex flex-col">
           <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">Who We Are</h1>
           <p className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed">
             <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">Enactus </span> 
@@ -33,11 +33,11 @@ const Home = () => {
             we aim to make our surroundings more sustainable than ever.
           </p>
         </article>
-        <div className="place-content-center grid w-[300px] md:w-[400px] lg:w-[700px] z-0">
+        <div className="place-content-center grid w-[300px] md:w-[400px] lg:w-[700px]">
           <img
             src = {encSmit}
 
-            alt = "bird"
+            alt = "pic"
           />
         </div>
       </section>
