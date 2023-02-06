@@ -5,7 +5,7 @@ const CollabCard = (props) => {
     <div className="p-10">
       <a href={props.url}>
         <div
-          className="bg-[#6c778344] rounded-3xl shadow-lg h-[18rem] max-w-[300px] min-w-[300px] mx-auto p-6 "
+          className="bg-[#8c929933] rounded-3xl shadow-lg h-[18rem] max-w-[300px] min-w-[300px] mx-auto p-6 hover:bg-yellow-400 duration-700"
           onClick
         >
           <img
