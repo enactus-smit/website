@@ -64,13 +64,13 @@ const Header = () => {
         <nav className={`${isOpen ? "w-[45vw]" : "w-0"} duration-[.3s] h-screen bg-slate-600/90`}>
         <ul className={`absolute left-20 mr-6 mt-[25vw] space-y-10 text-white font-semibold
         md:hidden ${displayMenu ? "inline-block" : "hidden"}`} onClick={toggleMenu}>
-          <li className="" onClick={() => routeChange("/")}>Home</li>
-          <li className="" onClick={() => routeChange("/team")}>Team 2022-2023</li>
-          <li className="" onClick={() => routeChange("/events")}>Events</li>
-          <li className="" onClick={() => routeChange("/projects")}>Our Projects</li>
-          <li className="" onClick={() => routeChange("/goals")}>Our Goals</li>
-          <li className="" onClick={() => routeChange("/contact")}>Contact Us</li>
-          <li className="" onClick={() => routeChange("/collaborations")}>Collaborations</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/")}>Home</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/team")}>Team 2022-2023</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/events")}>Events</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/projects")}>Our Projects</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/goals")}>Our Goals</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/contact")}>Contact Us</li>
+          <li className="cursor-pointer" onClick={() => routeChange("/collaborations")}>Collaborations</li>
           </ul>
         </nav>
       </div>
