@@ -47,7 +47,7 @@ const Home = () => {
 
       <section className="flex-col w-full h-auto pb-4">
         <h1 className='flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold'>Testimonials</h1>
-        <main className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 gap-4 md:gap-10">
+        <main className="grid md:grid-cols-2 gap-4 md:gap-10">
           <Testimonial
           heading = "Highlight heading"
           subHeading = "main testimonial"
