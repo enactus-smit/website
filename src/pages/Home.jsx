@@ -3,7 +3,7 @@ import encSmit from "../imgs/Enactus-SMIT-white.png"
 
 const Home = () => {
   return (
-    <main>
+    <main className="mx-16">
       <section>
         <div className="flex justify-center items-center py-10">
         <img
@@ -15,22 +15,32 @@ const Home = () => {
         />
       </div>
       </section>
+
       {/*About us */}
-      <section className="container mx-auto py-10">
-      <div className="flex">
-        <div className="w-1/2">
-          <h1 className="text-3xl font-bold mb-4">About Us</h1>
-          <p className="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Sed malesuada lacus eget nisi aliquam, in congue elit faucibus. 
-            Praesent id enim dapibus, viverra dolor at, molestie sapien. 
+
+      <section className="relative grid grid-cols-2 gap-10">
+        <article className="flex flex-col z-50">
+          <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">Who We Are</h1>
+          <p className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed">
+            <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">Enactus </span> 
+            is a network of global leaders that use effective business strategies
+            for positive social and environmental impact. It is a non-profit organisation
+            that uses the United Nations 17 Sustainable Development Goals as a framework
+            to bring about a change and create a better world for everyone.
+            Enactus SMIT is a newly formed chapter of this global platform. Since our
+            establishment in 2022, we&apos;ve been actively working on our first project
+            <span className="lg:text-[1.6rem] font-semibold"> अन्न-Drishti</span>. Backed by a strong core team and supportive local businesses,
+            we aim to make our surroundings more sustainable than ever.
           </p>
+        </article>
+        <div className="place-content-center grid w-[300px] md:w-[400px] lg:w-[700px] z-0">
+          <img
+            src = {encSmit}
+
+            alt = "bird"
+          />
         </div>
-        <div className="w-64 h-44">
-          <img src= {encSmit} alt="sideimg" />
-        </div>
-      </div>
-    </section>
+      </section>
     </main>
   )
 }
