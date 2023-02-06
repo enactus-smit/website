@@ -1,5 +1,6 @@
 import React from 'react'
 import encSmit from "../imgs/Enactus-SMIT-white.png"
+import { Testimonial } from '../components/Testimonial'
 
 const Home = () => {
   return (
@@ -40,6 +41,42 @@ const Home = () => {
             alt = "pic"
           />
         </div>
+      </section>
+
+      {/*testimonials*/}
+
+      <section className="flex-col w-full h-auto pb-4">
+        <h1 className='flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold'>Testimonials</h1>
+        <main className="grid mb-8 border border-gray-200 rounded-lg shadow-sm md:mb-12 md:grid-cols-2 gap-4 md:gap-10">
+          <Testimonial
+          heading = "Highlight heading"
+          subHeading = "main testimonial"
+          path = "https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
+          name = "Abhra"
+          desig = "team member"
+           />
+                     <Testimonial
+          heading = "Highlight heading"
+          subHeading = "main testimonial"
+          path = "https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
+          name = "Abhra"
+          desig = "team member"
+           />
+                     <Testimonial
+          heading = "Highlight heading"
+          subHeading = "main testimonial"
+          path = "https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
+          name = "Abhra"
+          desig = "team member"
+           />
+                     <Testimonial
+          heading = "Highlight heading"
+          subHeading = "main testimonial"
+          path = "https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
+          name = "Abhra"
+          desig = "team member"
+           />
+        </main>
       </section>
     </main>
   )

@@ -13,6 +13,13 @@
     body {
         overflow-x: hidden;
         font-family: 'Source Sans Pro', sans-serif;
+        background-image: url("../src/imgs/site_bg.png");
+        background-color: #f3f3f3;
+        background-repeat: repeat;
+        background-position: center;
+        background-size: cover;
+
+        
     @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-amber-500 !scrollbar-thumb-rounded-lg
             flex flex-col min-h-screen;
     
