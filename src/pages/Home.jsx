@@ -88,7 +88,7 @@ const Home = () => {
             As such, I quite enjoy being a member of the outreach team, for it gives me a proper opportunity to connect with the locals around town and learn more about them, their problems, and their ways of life. 
             With that being said, I eagerly look forward to picking up new, more meaningful experiences from our upcoming projects."
             path="https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
-            name="Abhra"
+            name="Name Here"
             desig="Survey Team"
           />
         </main>
