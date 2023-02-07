@@ -19,11 +19,12 @@ const Home = () => {
 
       {/*About us */}
 
-      <section className=" grid grid-cols-2 md:gap-2 lg:gap-10 ">
-        <article className="flex flex-col">
-          <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
+      <section className="relative flex flex-col">
+      <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
             Who We Are
           </h1>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
+        <article className="">
           <p className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed">
             <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">
               Enactus{" "}
@@ -43,9 +44,11 @@ const Home = () => {
             aim to make our surroundings more sustainable than ever.
           </p>
         </article>
-        <div className="place-content-center grid w-[300px] md:w-[400px] lg:w-[700px]">
-          <img src={encSmit} alt="pic" />
+        <div className="relative grid place-content-center">
+          <img src={encSmit} 
+          alt="pic" />
         </div>
+      </div>
       </section>
 
       {/*testimonials*/}
