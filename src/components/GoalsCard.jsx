@@ -5,7 +5,7 @@ const GoalsCard = (props) => {
     <div className="flex flex-col p-10">
       <a href={props.url}>
         <div
-          className="bg-[#8c929933] rounded-3xl shadow-lg h-auto w-[300px] mx-auto p-6
+          className="bg-[#ffffffd5] rounded-3xl shadow-lg h-auto w-[300px] mx-auto p-6
            hover:bg-yellow-400 duration-700"
           
         >

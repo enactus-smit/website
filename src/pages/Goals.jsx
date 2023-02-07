@@ -119,7 +119,7 @@ const Goals = () => {
   return (
     <>
       <div>
-        <h1 className="text-center my-5 text-4xl">Our Goals</h1>
+        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold text-gray-900">Our Goals</h1>
       </div>
       <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center  ">
         {sdgs.map((goal, img, index) => (
