@@ -5,7 +5,7 @@ import { Testimonial } from "../components/Testimonial";
 const Home = () => {
   return (
     <main className="mx-16 h-screen w-auto">
-      <section className="bg-blue-400">
+      <section className="">
         <div className="flex justify-center items-center py-10">
           <img
             src={encSmit}
