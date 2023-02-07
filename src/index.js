@@ -9,10 +9,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <div className="fixed w-screen top-0 z-50">
-      <Header />
-    </div>
+      <div className="fixed w-screen top-0 z-50">
+        <Header />
+      </div>
+      <div className="mt-[132px]">
       <App />
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );
