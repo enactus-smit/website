@@ -47,28 +47,28 @@ const Header = () => {
           lg:space-x-12"
         >
           <li
-            className="nav-item hover:text-yellow-400 duration-700"
+            className="nav-item "
             onClick={() => routeChange("/")}
           >
             Home
           </li>
-          <li className="nav-item hover:text-yellow-400 duration-700" onClick={() => routeChange("/team")}>
+          <li className="nav-item " onClick={() => routeChange("/team")}>
             Team 2022-2023
           </li>
-          <li className="nav-item hover:text-yellow-400 duration-700" onClick={() => routeChange("/events")}>
+          <li className="nav-item " onClick={() => routeChange("/events")}>
             Events
           </li>
-          <li className="nav-item hover:text-yellow-400 duration-700" onClick={() => routeChange("/projects")}>
+          <li className="nav-item " onClick={() => routeChange("/projects")}>
             Our Projects
           </li>
-          <li className="nav-item hover:text-yellow-400 duration-700" onClick={() => routeChange("/goals")}>
+          <li className="nav-item " onClick={() => routeChange("/goals")}>
             Our Goals
           </li>
-          <li className="nav-item hover:text-yellow-400 duration-700" onClick={() => routeChange("/contact")}>
+          <li className="nav-item " onClick={() => routeChange("/contact")}>
             Contact Us
           </li>
           <li
-            className="nav-item hover:text-yellow-400 duration-700"
+            className="nav-item "
             onClick={() => routeChange("/collaborations")}
           >
             Collaborations

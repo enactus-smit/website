@@ -1,5 +1,4 @@
 import React from "react";
-import CollabCard from "../components/CollabCard";
 import first from "../imgs/1.png";
 import second from "../imgs/2.png";
 import third from "../imgs/3.png";
@@ -17,6 +16,7 @@ import fth from "../imgs/14.png";
 import fifteenth from "../imgs/15.png";
 import sixteenth from "../imgs/16.png";
 import seventeenth from "../imgs/17.png";
+import GoalsCard from "../components/GoalsCard";
 
 const sdgs = [
   {
@@ -123,7 +123,7 @@ const Goals = () => {
       </div>
       <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center  ">
         {sdgs.map((goal, img, index) => (
-          <CollabCard
+          <GoalsCard
             key={index}
             name={goal.name}
             description={goal.description}
