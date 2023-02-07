@@ -9,7 +9,7 @@ export const Testimonial = (props) => {
     let desig = props.desig
 
     return (
-        <figure className="grid grid-cols-2 bg-slate-100 outline-4 outline-yellow-400 outline-offset-2">
+        <figure className="grid grid-cols-2 space-x-3 p-6 bg-slate-100 rounded-lg outline-4 outline-yellow-400 outline-offset-2">
             <img className=""
              src={path} alt="" width="384" height="512"/>
             <div className="">
