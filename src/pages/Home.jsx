@@ -1,10 +1,11 @@
 import React from "react";
 import encSmit from "../imgs/Enactus-SMIT-white.png";
 import { Testimonial } from "../components/Testimonial";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className="mx-16 h-screen w-auto">
+    <main className="relative mx-16 h-auto w-auto">
       <section className="">
         <div className="flex justify-center items-center py-10">
           <img
@@ -93,6 +94,10 @@ const Home = () => {
           />
         </main>
       </section>
+      <div className="">
+        <Footer />
+      </div>
+      
     </main>
   );
 };

@@ -31,4 +31,3 @@
 .nav-item {
     @apply text-slate-600 hover:text-yellow-400 transition duration-[.4s] cursor-pointer;
 }
-
