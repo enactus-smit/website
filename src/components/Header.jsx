@@ -18,7 +18,7 @@ const Header = () => {
   );
 
   //funtion for menu button in small screens
-  const toggleMenu = useCallback( () => {
+  const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
     if (isOpen) {
       setDisplayMenu(false);
@@ -40,26 +40,25 @@ const Header = () => {
           alt="logo-enactus"
         />
         <img width={180} height={200} src={logoSmit} alt="logo-smit" />
-              {/*nav button*/}
+        {/*nav button*/}
 
-      <div className={` mt-3 z-50 right-0 text-sm font-medium md:hidden cursor-pointer ${isOpen ? "absolute" : "fixed"}`}>
-        <Bars3Icon
-          className={`h-6 w-6 mr-3 fill-yellow-500 transition-transform duration-[.6] ${
-            isOpen ? "rotate-90" : "rotate-0"
-          }`}
-          onClick={toggleMenu}
-        />
-      </div>
+        <div
+          className={` mt-3 z-50 right-0 text-sm font-medium md:hidden cursor-pointer ${
+            isOpen ? "absolute" : "fixed"
+          }`}>
+          <Bars3Icon
+            className={`h-6 w-6 mr-3 fill-yellow-500 transition-transform duration-[.6] ${
+              isOpen ? "rotate-90" : "rotate-0"
+            }`}
+            onClick={toggleMenu}
+          />
+        </div>
       </div>
       <nav className="flex justify-center">
         <ul
           className="hidden md:flex md:px-2 lg:px-6 space-x-6 font-semibold text-md
-          lg:space-x-12"
-        >
-          <li
-            className="nav-item "
-            onClick={() => routeChange("/")}
-          >
+          lg:space-x-12">
+          <li className="nav-item " onClick={() => routeChange("/")}>
             Home
           </li>
           <li className="nav-item " onClick={() => routeChange("/team")}>
@@ -79,68 +78,63 @@ const Header = () => {
           </li>
           <li
             className="nav-item "
-            onClick={() => routeChange("/collaborations")}
-          >
+            onClick={() => routeChange("/collaborations")}>
             Collaborations
           </li>
         </ul>
       </nav>
       {/*The bar*/}
       <div className=" bg-yellow-400 w-full overflow-hidden h-2 mt-2"></div>
-      
+
       {/*navigation panel*/}
 
       <div className="flex fixed inset-y-0 right-0 top-0 md:hidden">
         <nav
           className={`${
             isOpen ? "w-[45vw]" : "w-0"
-          } duration-[.3s] h-[100vh] bg-slate-600/90`}
-        >
+          } duration-[.3s] h-[100vh] bg-slate-600/90`}>
           <ul
             className={`absolute left-20 mr-6 mt-[25vw] space-y-10 text-white font-semibold
         md:hidden ${displayMenu ? "inline-block" : "hidden"}`}
-            onClick={toggleMenu}
-          >
-            <li className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700" onClick={() => routeChange("/")}>
+            onClick={toggleMenu}>
+            <li
+              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              onClick={() => routeChange("/")}>
               Home
             </li>
-            <li className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700" onClick={() => routeChange("/team")}>
+            <li
+              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              onClick={() => routeChange("/team")}>
               Team 2022-2023
             </li>
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
-              onClick={() => routeChange("/events")}
-            >
+              onClick={() => routeChange("/events")}>
               Events
             </li>
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
-              onClick={() => routeChange("/projects")}
-            >
+              onClick={() => routeChange("/projects")}>
               Our Projects
             </li>
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
-              onClick={() => routeChange("/goals")}
-            >
+              onClick={() => routeChange("/goals")}>
               Our Goals
             </li>
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
-              onClick={() => routeChange("/contact")}
-            >
+              onClick={() => routeChange("/contact")}>
               Contact Us
             </li>
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
-              onClick={() => routeChange("/collaborations")}
-            >
+              onClick={() => routeChange("/collaborations")}>
               Collaborations
             </li>
           </ul>
         </nav>
       </div>
-
     </div>
   );
 };
