@@ -1,10 +1,11 @@
 import React from "react";
 import encSmit from "../imgs/Enactus-SMIT-white.png";
 import { Testimonial } from "../components/Testimonial";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className="mx-16 h-screen w-auto">
+    <main className="relative mx-16 h-auto w-auto">
       <section className="">
         <div className="flex justify-center items-center py-10">
           <img
@@ -51,9 +52,29 @@ const Home = () => {
       </div>
       </section>
 
+      {/*Enactus word break */}
+
+      <section className="flex-col w-full h-auto bg-white border-4 border-yellow-400 rounded-lg mt-20
+      border-x-[80px]">
+        <article className="flex-col w-[50%] mx-auto my-10">
+          <div>
+            <h1 className="text-slate-900 text-3xl font-semibold"><span className="text-yellow-600">En</span>trepreneurial</h1>
+            <p className="text-xl font-medium ">Having the perspective to see an opportunity and the talent to create calue from that opportunity.</p>
+          </div>
+          <div>
+            <h1 className="text-slate-900 text-3xl font-semibold"><span className="text-yellow-600">Act</span>ion</h1>
+            <p className="text-xl font-medium ">The willingness to do something and the commitment to see it through even when the outcome is not guaranteed.</p>
+          </div>
+          <div>
+            <h1 className="text-yellow-600 text-3xl font-semibold">Us</h1>
+            <p className="text-xl font-medium ">A group of people who see themselves connected in some important way; individuals that are part of a greater whole.</p>
+          </div>
+        </article>
+      </section>
+
       {/*testimonials*/}
 
-      <section className="flex-col w-full h-auto pb-4">
+      <section className="flex-col w-full h-auto pb-4 mt-20">
         <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
           Testimonials
         </h1>
@@ -70,7 +91,7 @@ const Home = () => {
             subHeading="It has been around 3 months since I have joined Enactus. Even though I have only been to one survey expedition which was based on the project Anna drishti, i have been engaging in different tasks and gathered much experience through various activities of the club. I have learnt a lot regarding the wastage of food happening in our area and also gathered experience. I was partnered up Gamin Ghaley, and with his help, we successfully conducted the survey research and gathered enough information for project Anna drishti from 5 different restaurants. I have been successfully guided by my team leader and president and I am looking forward to my next task."
             path="https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
             name="Suryasnato Mitra"
-            desig="Outreach Team"
+            desig="Survey Team"
           />
           <Testimonial
             heading="Highlight heading"
@@ -93,6 +114,10 @@ const Home = () => {
           />
         </main>
       </section>
+      <div className="">
+        <Footer />
+      </div>
+      
     </main>
   );
 };

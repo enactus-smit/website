@@ -2,14 +2,12 @@ import React from "react";
 import CollabCard from "../components/CollabCard";
 import hult_prize from "../imgs/hult_prize.png";
 import art from "../imgs/Art.png";
+import Footer from "../components/Footer";
 const Collaborations = () => {
   return (
     <div>
-      <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
-        Collaborations
-      </h1>
+      <h1 className="text-center my-5 text-4xl ">Collaborations</h1>
       <div className="grid md:grid-cols-2 grid-cols-1 lg:justify-evenly px-10 ">
-        <CollabCard name="Institute Innovision Council" />
         <CollabCard
           name="Hult Prize Foundation"
           url="https://www.hultprize.org/"
@@ -23,6 +21,7 @@ const Collaborations = () => {
           img={art}
         />
       </div>
+      <Footer />
     </div>
   );
 };

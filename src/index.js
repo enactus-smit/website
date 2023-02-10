@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Header from "./components/Header";
 import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,8 @@ root.render(
         <Header />
       </div>
       <div className="mt-[132px]">
-      <App />
+      <App />      
+
       </div>
     </BrowserRouter>
   </React.StrictMode>

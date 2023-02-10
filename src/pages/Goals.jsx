@@ -17,6 +17,7 @@ import fifteenth from "../imgs/15.png";
 import sixteenth from "../imgs/16.png";
 import seventeenth from "../imgs/17.png";
 import GoalsCard from "../components/GoalsCard";
+import Footer from "../components/Footer";
 
 const sdgs = [
   {
@@ -147,6 +148,7 @@ const Goals = () => {
           />
         ))}
       </div>
+      <Footer />
     </>
   );
 };
