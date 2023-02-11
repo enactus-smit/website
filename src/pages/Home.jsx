@@ -1,6 +1,7 @@
 import React from "react";
 import encSmit from "../imgs/enactus banner.png";
 import encTran from "../imgs/Enactus_Full_Color_logo.png";
+import encRib from "../imgs/encribbon.png";
 import { Testimonial } from "../components/Testimonial";
 import Footer from "../components/Footer";
 
@@ -22,9 +23,13 @@ const Home = () => {
       {/*About us */}
 
       <section className="relative flex flex-col">
-      <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
+        <div className="flex sm:justify-center">
+          <img src={encRib} width={100} height={20} alt="rib" />
+          <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
             Who We Are
           </h1>
+          <img src={encRib} width={100} height={20} alt="rib" />
+        </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
         <article className="">
           <p className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed">
@@ -76,9 +81,13 @@ const Home = () => {
       {/*testimonials*/}
 
       <section className="flex-col w-full h-auto pb-4 mt-20">
-        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
-          Testimonials
-        </h1>
+        <div className="flex justify-center mb-10">
+          <img src={encRib} width={100} height={20} alt="rib" />
+          <h1 className=" whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
+            Testimonials
+          </h1>
+          <img src={encRib} width={100} height={20} alt="rib" />
+        </div>
         <main className="grid md:grid-cols-2 gap-4 md:gap-10">
           <Testimonial
             heading="Highlight heading"
