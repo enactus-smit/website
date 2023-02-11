@@ -31,3 +31,7 @@
 .nav-item {
     @apply text-slate-600 hover:text-yellow-400 transition duration-[.4s] cursor-pointer;
 }
+
+.input-boxes{
+    @apply p-2 rounded-lg focus:!outline-4 !outline-yellow-400 ring-4 ring-yellow-400 required:ring-red-600;
+}
