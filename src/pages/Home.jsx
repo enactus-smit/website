@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main className="relative mx-8 md:mx-16 h-auto w-auto">
       <section className="w-full h-auto">
-        <div className="flex py-10">
+        <div className="flex pb-10">
           <img
             src={encSmit}
             alt="Logo"
@@ -22,8 +22,8 @@ const Home = () => {
 
       {/*About us */}
 
-      <section className="relative flex flex-col">
-        <div className="flex sm:justify-center">
+      <section className="relative flex flex-col mt-10">
+        <div className="flex sm:justify-center mb-10">
           <img src={encRib} width={100} height={20} alt="rib" />
           <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
             Who We Are
@@ -31,7 +31,7 @@ const Home = () => {
           <img src={encRib} width={100} height={20} alt="rib" />
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
-        <article className="">
+        <article className="bg-[#ffffffd5] p-8 rounded-3xl">
           <p className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed">
             <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">
               Enactus{" "}
