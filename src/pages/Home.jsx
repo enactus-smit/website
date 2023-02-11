@@ -23,12 +23,12 @@ const Home = () => {
       {/*About us */}
 
       <section className="relative flex flex-col mt-10">
-        <div className="flex sm:justify-center mb-10">
-          <img src={encRib} width={100} height={20} alt="rib" />
+        <div className="flex justify-center mb-10">
+          {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
           <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
             Who We Are
           </h1>
-          <img src={encRib} width={100} height={20} alt="rib" />
+          {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
         </div>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
         <article className="bg-[#ffffffd5] p-8 rounded-3xl">
@@ -82,11 +82,11 @@ const Home = () => {
 
       <section className="flex-col w-full h-auto pb-4 mt-20">
         <div className="flex justify-center mb-10">
-          <img src={encRib} width={100} height={20} alt="rib" />
+         {/*} <img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20" /> */}
           <h1 className=" whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
             Testimonials
           </h1>
-          <img src={encRib} width={100} height={20} alt="rib" />
+          {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
         </div>
         <main className="grid md:grid-cols-2 gap-4 md:gap-10">
           <Testimonial
