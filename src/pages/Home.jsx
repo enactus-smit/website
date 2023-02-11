@@ -1,19 +1,20 @@
 import React from "react";
-import encSmit from "../imgs/Enactus-SMIT-white.png";
+import encSmit from "../imgs/enactus banner.png";
+import encTran from "../imgs/Enactus_Full_Color_logo.png";
 import { Testimonial } from "../components/Testimonial";
 import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <main className="relative mx-8 md:mx-16 h-auto w-auto">
-      <section className="">
-        <div className="flex justify-center items-center py-10">
+      <section className="w-full h-auto">
+        <div className="flex py-10">
           <img
             src={encSmit}
             alt="Logo"
-            width={500}
-            height={500}
-            className="w-80 h-64"
+            width={1400}
+            height={400}
+            className="w-full h-auto"
           />
         </div>
       </section>
@@ -21,7 +22,7 @@ const Home = () => {
       {/*About us */}
 
       <section className="relative flex flex-col">
-      <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
+      <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
             Who We Are
           </h1>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
@@ -45,8 +46,8 @@ const Home = () => {
             aim to make our surroundings more sustainable than ever.
           </p>
         </article>
-        <div className="relative grid place-content-center">
-          <img src={encSmit} 
+        <div className="relative grid place-items-center">
+          <img src={encTran} 
           alt="pic" />
         </div>
       </div>
