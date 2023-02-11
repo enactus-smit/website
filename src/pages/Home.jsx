@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className="relative mx-16 h-auto w-auto">
+    <main className="relative mx-8 md:mx-16 h-auto w-auto">
       <section className="">
         <div className="flex justify-center items-center py-10">
           <img
@@ -55,19 +55,19 @@ const Home = () => {
       {/*Enactus word break */}
 
       <section className="flex-col w-full h-auto bg-white border-4 border-yellow-400 rounded-lg mt-20
-      border-x-[80px]">
+      border-x-[20px] md:border-x-[80px]">
         <article className="flex-col w-[50%] mx-auto my-10">
           <div>
-            <h1 className="text-slate-900 text-3xl font-semibold"><span className="text-yellow-600">En</span>trepreneurial</h1>
-            <p className="text-xl font-medium ">Having the perspective to see an opportunity and the talent to create calue from that opportunity.</p>
+            <h1 className="text-slate-900 text-xl md:text-3xl font-semibold"><span className="text-yellow-600">En</span>trepreneurial</h1>
+            <p className="text-md md:text-xl font-medium ">Having the perspective to see an opportunity and the talent to create calue from that opportunity.</p>
           </div>
           <div>
-            <h1 className="text-slate-900 text-3xl font-semibold"><span className="text-yellow-600">Act</span>ion</h1>
-            <p className="text-xl font-medium ">The willingness to do something and the commitment to see it through even when the outcome is not guaranteed.</p>
+            <h1 className="text-slate-900 text-xl md:text-3xl font-semibold"><span className="text-yellow-600">Act</span>ion</h1>
+            <p className="text-md md:text-xl font-medium ">The willingness to do something and the commitment to see it through even when the outcome is not guaranteed.</p>
           </div>
           <div>
-            <h1 className="text-yellow-600 text-3xl font-semibold">Us</h1>
-            <p className="text-xl font-medium ">A group of people who see themselves connected in some important way; individuals that are part of a greater whole.</p>
+            <h1 className="text-yellow-600 text-xl md:text-3xl font-semibold">Us</h1>
+            <p className="text-md md:text-xl font-medium ">A group of people who see themselves connected in some important way; individuals that are part of a greater whole.</p>
           </div>
         </article>
       </section>
@@ -81,7 +81,7 @@ const Home = () => {
         <main className="grid md:grid-cols-2 gap-4 md:gap-10">
           <Testimonial
             heading="Highlight heading"
-            subHeading="My idea of team work was unclear before joining Enactus. Upon joining, I got my first survey done along with the team, who in return taught and helped me complete my task. After a few meetings, I felt my communication grade up and my confidence rise. They have taught me how to manage time and work on creative ideas. The social work done by Enactus is greatly appreciated by not only the members, but all the businesses that are willing to provide and help. I look forward to expand my knowledge and further helping my team in whichever task provided."
+            subHeading="My idea of team-work was unclear before joining Enactus. Upon joining, I got my first survey done along with the team, who in return taught and helped me complete my task. After a few meetings, I felt my communication grade up and my confidence rise. They have taught me how to manage time and work on creative ideas. The social work done by Enactus is greatly appreciated by not only the members, but all the businesses that are willing to provide and help. I look forward to expand my knowledge and further helping my team in whichever task provided."
             path="https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg"
             name="Soheli Das"
             desig="Survey Team"

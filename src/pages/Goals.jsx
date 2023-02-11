@@ -148,7 +148,9 @@ const Goals = () => {
           />
         ))}
       </div>
-      <Footer />
+      <div className="mx-8 md:mx-20">
+        <Footer />
+      </div>
     </>
   );
 };
