@@ -14,8 +14,7 @@ root.render(
         <Header />
       </div>
       <div className="mt-[132px]">
-      <App />      
-
+        <App />
       </div>
     </BrowserRouter>
   </React.StrictMode>
