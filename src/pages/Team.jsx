@@ -20,26 +20,26 @@ const Team = () => {
       image: "/"
     },
     {
-      name: "Team 2",
-      image: "/images/team2.jpg"
+      name: "VP",
+      image: ""
     },
     {
-      name: "Team 3",
-      image: "/images/team3.jpg"
+      name: "VP ",
+      image: ""
     }
   ];
 
   const teamNames = [
     {
-      name: "Team 4",
+      name: "Team",
       members: ["Member", "Member", "Member"]
     },
     {
-      name: "Team 5",
+      name: "Team",
       members: ["Member", "Member", "Member"]
     },
     {
-      name: "Team 6",
+      name: "Team",
       members: ["Member", "Member", "Member"]
     }
   ];
