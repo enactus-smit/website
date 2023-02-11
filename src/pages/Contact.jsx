@@ -16,7 +16,7 @@ const Contact = () => {
           <p className="flex justify-center text-lg font-medium">
             Feel free to send us your valuable feedback!
           </p>
-          <form className="flex flex-col h-auto w-auto space-y-12 mt-10 px-20">
+          <form className="flex flex-col h-auto w-auto space-y-12 mt-10 md:px-10 lg:px-20">
             <input placeholder="Name *" className="input-boxes">
             </input>
             <input placeholder="E-mail *" className="input-boxes ">
