@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
         <footer className="rounded-xl p-4 justify-between shadow md:flex md:items-center md:p-6 bg-gray-100 border-4 border-yellow-400 mb-4">
-            <div className="flex flex-col">
+            <div className="flex flex-col font-semibold">
                 <span className=" whitespace-nowrap text-sm  text-gray-600">
                     © 2023 Enactus-SMIT
                 <span className="ml-9"></span>All Rights Reserved.
                 </span>
-                <h2 className="mt-2 mb-2 whitespace-pre-wrap text-gray-700 text-md">Made with ♥ by Abhrajit Ray, Kunal Sharma and Abhinav Anand</h2>
+                <h2 className="mt-2 mb-2 whitespace-pre-wrap text-gray-700 font-semibold tracking-wide text-md">Made with ♥ by Abhrajit Ray, Kunal Sharma and Abhinav Anand</h2>
             </div>
             <div className="flex mt-4 space-x-6 sm:mt-0">
                 <a href="https://www.instagram.com/enactussmit/" className="text-gray-500 hover:text-white" target="_blank" rel="noopener noreferrer">
