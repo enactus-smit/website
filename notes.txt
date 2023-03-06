@@ -4,9 +4,9 @@ pattern for background
 Navbar
     Home page 
         About Us 
-        Who are we / What we do/ =>slide show
+        Who are we / What we do/ =>slide show glass effect
         Testimonials
-    Team 2022-2023
+    Team 2022-2023 glass effect on the teams list
     Events page with a heading
         => Vertical Timeline with descriptions on the right
     Our Projects
@@ -19,3 +19,6 @@ Navbar
         iasce
         coffee break
         another from college
+
+
+logo should be bigger in the nav bar
