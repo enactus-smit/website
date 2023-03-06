@@ -1,15 +1,18 @@
 import React from "react";
 import holiProd from "../imgs/holiProd.jpeg";
+import anna from "../imgs/annadristi.jpeg";
 import Footer from "../components/Footer";
 
 const Projects = () => {
   return (
     <div className="">
       <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
-        Projects
+        Our Projects
       </h1>
-      <article className="flex flex-col h-screen mx-8 md:mx-16">
+      <article className="flex flex-col mx-8 md:mx-16">
+
         {/*Holi Section */}
+      
         <section className="flex-col">
           <h1
             className="inline-block whitespace-nowrap text-[2.5rem] md:text-[3rem] lg:text-[4.2rem] font-bold
@@ -20,18 +23,19 @@ const Projects = () => {
           </h1>
           <div
             className="flex flex-col lg:flex-row md:flex-row py-5 md:space-x-4 lg:space-x-20 space-y-5
-          md:space-y-0 h-[30rem]"
+          md:space-y-0 md:h-[30rem] lg:h-auto"
           >
             <img
-              className="rounded-3xl"
+              className="rounded-3xl lg:h-[600px]"
               src={holiProd}
               alt="product pic"
             />
-            <div className="bg-[#ffffffd5] md:p-5 lg:p-8 rounded-3xl text-xl lg:text-2xl md:leading-snug text-slate-800
-            font-semibold overflow-y-scroll">
+            <div className="bg-[#ffffffd5] p-4 md:p-5 lg:p-8 rounded-3xl text-lg lg:text-2xl leading-relaxed text-slate-800
+            font-semibold overflow-y-scroll !scrollbar-thin !scrollbar-thumb-rounded-lg !scrollbar-thumb-yellow-400">
               <p>
+              <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">
                 Introducing Enactus EcoHues - the perfect solution for an
-                organic and eco-friendly Holi celebration!
+                organic and eco-friendly Holi celebration! </span> 
                 <br />
                 <br />
                 Our organic Holi
@@ -54,8 +58,47 @@ const Projects = () => {
           </div>
         </section>
 
+        {/*Anna dristi section*/}
+
+        <section className="flex-col">
+          <h1
+            className="inline-block whitespace-nowrap text-[2.5rem] md:text-[3rem] lg:text-[4.2rem] font-bold
+            bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text
+            text-transparent "
+          >
+            अन्न-Drishti
+          </h1>
+          <div
+            className="flex flex-col lg:flex-row md:flex-row py-5 md:space-x-4 lg:space-x-20 space-y-5
+          md:space-y-0 md:h-[30rem] lg:h-auto"
+          >
+            <img
+              className="rounded-3xl lg:h-[600px]"
+              src={anna}
+              alt="anna dristi"
+            />
+            <div className="bg-[#ffffffd5] p-4 md:p-5 lg:p-8 rounded-3xl text-lg lg:text-2xl leading-relaxed text-slate-800
+            font-semibold overflow-y-scroll !scrollbar-thin !scrollbar-thumb-rounded-lg !scrollbar-thumb-yellow-400">
+              <p>
+                <span className="text-[1.3rem] md:text-[1.7rem] lg:text-[2rem] font-semibold">We, at Enactus SMIT, </span> 
+                through our project<span className="lg:text-[1.6rem] font-semibold"> अन्न-Drishti</span>, aim to eliminate
+                food wastage by processing the wasted food into useful manures and
+                fertilisers.
+                The project will contact our hostel mess to give us the food thrown away
+                every day. Apart from this, we will also be contacting local restaurants and
+                colleges for the same.
+                Once collected, our team will process it into manure and biogas with the
+                help of local communities around us thus promoting Social
+                Entrepreneurship.
+                The produced biogas and manure will then be sold to local businesses,
+                tea-estates and online.
+              </p>
+            </div>
+          </div>
+        </section>
+
       </article>
-      <div className="flex-1">
+      <div className="flex-1 mx-8 md:mx-16">
           <Footer />
         </div>
     </div>
