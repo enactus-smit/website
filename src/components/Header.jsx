@@ -48,7 +48,7 @@ const Header = () => {
           }`}>
           <Bars3Icon
             className={`h-6 w-6 mr-3 fill-yellow-500 transition-transform duration-[.6] ${
-              isOpen ? "rotate-90" : "rotate-0"
+              isOpen ? "rotate-90 fill-black" : "rotate-0"
             }`}
             onClick={toggleMenu}
           />
@@ -94,18 +94,18 @@ const Header = () => {
         <nav
           className={`${
             isOpen ? "w-[45vw]" : "w-0"
-          } duration-[.3s] h-[100vh] bg-slate-600/90`}>
+          } duration-[.3s] h-[100vh] bg-yellow-400/90`}>
           <ul
-            className={`absolute left-20 mr-6 mt-[25vw] space-y-10 text-white font-semibold
+            className={`absolute left-10 mr-6 mt-[25vw] space-y-10 font-semibold
         md:hidden ${displayMenu ? "inline-block" : "hidden"}`}
             onClick={toggleMenu}>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/")}>
               Home
             </li>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/team")}>
               Team 2022-2023
             </li>
@@ -117,22 +117,22 @@ const Header = () => {
             </li>
         */}
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/projects")}>
               Our Projects
             </li>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/goals")}>
               Our Goals
             </li>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/contact")}>
               Contact Us
             </li>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/collaborations")}>
               Collaborations
             </li>
