@@ -7,14 +7,14 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className="relative  h-auto w-auto">
+    <main className="relative h-screen w-screen">
       {/*top banner*/}
-      <div className="flex-1 h-auto w-full">
+      <div className=" h-auto w-screen">
         <img
           src={encSmit}
           alt="banner"
-          width={1400}
-          height={400}
+          width={2000}
+          height={800}
         />
       </div>
 
