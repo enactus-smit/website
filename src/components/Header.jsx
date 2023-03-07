@@ -64,11 +64,9 @@ const Header = () => {
           <li className="nav-item " onClick={() => routeChange("/team")}>
             Team 2022-2023
           </li>
-          {/*}
           <li className="nav-item " onClick={() => routeChange("/events")}>
             Events
           </li>
-          */}
           <li className="nav-item " onClick={() => routeChange("/projects")}>
             Our Projects
           </li>
@@ -109,13 +107,11 @@ const Header = () => {
               onClick={() => routeChange("/team")}>
               Team 2022-2023
             </li>
-            {/*
             <li
               className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
               onClick={() => routeChange("/events")}>
               Events
             </li>
-        */}
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/projects")}>

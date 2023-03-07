@@ -60,7 +60,7 @@ const Projects = () => {
 
         {/*Anna dristi section*/}
 
-        <section className="flex-col">
+        <section className="flex-col mt-10">
           <h1
             className="inline-block whitespace-nowrap text-[2.5rem] md:text-[3rem] lg:text-[4.2rem] font-bold
             bg-gradient-to-r from-green-500 to-lime-500 bg-clip-text
@@ -84,9 +84,13 @@ const Projects = () => {
                 through our project<span className="lg:text-[1.6rem] font-semibold"> अन्न-Drishti</span>, aim to eliminate
                 food wastage by processing the wasted food into useful manures and
                 fertilisers.
+                <br/>
+                <br/>
                 The project will contact our hostel mess to give us the food thrown away
                 every day. Apart from this, we will also be contacting local restaurants and
                 colleges for the same.
+                <br/>
+                <br/>
                 Once collected, our team will process it into manure and biogas with the
                 help of local communities around us thus promoting Social
                 Entrepreneurship.

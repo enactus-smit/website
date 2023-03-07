@@ -32,7 +32,7 @@ const TeamCard = (props) => (
 
 const TeamNameCard = ({ name, members, director }) => {
   return (
-    <div className="w-48 lg:w-72 h-64 m-4 overflow-hidden shadow-lg bg-white text-center rounded-xl ">
+    <div className="w-48 lg:w-72 h-auto leading-loose m-4 shadow-lg bg-white text-center rounded-xl ">
       <div className="pt-4 pb-2 bg-yellow-400">
         <div className="font-bold text-xl mb-2 ">{name}</div>
       </div>

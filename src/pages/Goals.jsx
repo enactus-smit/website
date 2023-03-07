@@ -124,7 +124,7 @@ const Goals = () => {
           Our Goals
         </h1>
       </div>
-      <div className="bg-[#ffffffd5] rounded-3xl shadow-lg w-[800px] mx-auto px-6 ">
+      <div className=" bg-[#ffffffd5] rounded-3xl shadow-lg w-[70%] mx-auto px-6 ">
         <article className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed py-4">
           We at Enactus SMIT strive to develop an environment of
           entrepreneurship and innovation for the students of today, to help
