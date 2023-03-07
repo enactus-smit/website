@@ -10,7 +10,9 @@ const Collaborations = () => {
         Collaborations
       </h1>
       <div className="grid md:grid-cols-2 grid-cols-1 lg:justify-evenly px-10 ">
-        <CollabCard name="Institute Innovision Council" />
+        <CollabCard 
+        name="Institute Innovision Council" 
+        />
         <CollabCard
           name="Hult Prize Foundation"
           url="https://www.hultprize.org/"

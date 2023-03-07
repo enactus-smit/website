@@ -118,7 +118,7 @@ const sdgs = [
 
 const Goals = () => {
   return (
-    <>
+    <div className="h-screen">
       <div>
         <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
           Our Goals
@@ -137,7 +137,7 @@ const Goals = () => {
           relationship for our future endeavors.
         </article>
       </div>
-      <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center  ">
+      <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center">
         {sdgs.map((goal, img, index) => (
           <GoalsCard
             key={index}
@@ -151,7 +151,7 @@ const Goals = () => {
       <div className="mx-8 md:mx-20">
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

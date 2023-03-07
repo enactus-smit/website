@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Projects = () => {
   return (
-    <div className="">
+    <div className="h-screen">
       <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
         Our Projects
       </h1>

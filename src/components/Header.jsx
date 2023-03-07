@@ -88,7 +88,7 @@ const Header = () => {
 
       {/*navigation panel*/}
 
-      <div className="flex fixed inset-y-0 right-0 top-0 md:hidden">
+      <div className="flex fixed inset-y-0 right-0 top-0 md:hidden overflow-y-auto">
         <nav
           className={`${
             isOpen ? "w-[45vw]" : "w-0"

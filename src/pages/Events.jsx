@@ -6,7 +6,7 @@ import clothDon from "../imgs/clothDon.jpeg";
 
 const Events = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="h-screen">
       <section>
         <div className="py-6">
           <div className="container mx-auto flex flex-col items-start md:flex-row ">
@@ -185,7 +185,7 @@ const Events = () => {
           </div>
         </div>
       </section>
-      <div classNameName="mx-8 md:mx-20 flex-1">
+      <div className="mx-8 md:mx-20 flex-1">
         <Footer />
       </div>
     </div>

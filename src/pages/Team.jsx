@@ -11,6 +11,7 @@ import Yash from "../imgs/Yash.png";
 import Ahana from "../imgs/Ahana.png";
 import Aditya from "../imgs/Aditya.png";
 import Sir from "../imgs/Bikash_sir.png";
+import Footer from "../components/Footer";
 
 const Team = () => {
   const presidentsTeachers = [
@@ -96,7 +97,7 @@ const Team = () => {
     },
   ];
   return (
-    <div>
+    <div className="h-screen">
       <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
         Our Team
       </h1>
@@ -124,6 +125,9 @@ const Team = () => {
             />
           ))}
         </div>
+      </div>
+      <div className="mx-8 md:mx-20">
+        <Footer />
       </div>
     </div>
   );
