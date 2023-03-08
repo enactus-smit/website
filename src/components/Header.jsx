@@ -88,7 +88,7 @@ const Header = () => {
 
       {/*navigation panel*/}
 
-      <div className="flex fixed inset-y-0 right-0 top-0 md:hidden overflow-y-auto">
+      <div className="flex fixed inset-y-0 right-0 top-0 md:hidden">
         <nav
           className={`${
             isOpen ? "w-[45vw]" : "w-0"
@@ -108,7 +108,7 @@ const Header = () => {
               Team 2022-2023
             </li>
             <li
-              className="text-yellow-300 hover:text-yellow-500 cursor-pointer duration-700"
+              className="text-gray-800 hover:text-black cursor-pointer duration-700"
               onClick={() => routeChange("/events")}>
               Events
             </li>
