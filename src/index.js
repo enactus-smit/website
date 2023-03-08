@@ -13,7 +13,7 @@ root.render(
       <div className="fixed w-screen top-0 z-50">
         <Header />
       </div>
-      <div className="mt-[108px]">
+      <div className="mt-[108px] md:mt-[132px]">
         <App />
       </div>
     </BrowserRouter>

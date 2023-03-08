@@ -1,6 +1,6 @@
 import React from "react";
-import holiProd from "../imgs/holiProd.jpeg";
-import anna from "../imgs/annadristi.jpeg";
+import holiProd from "../imgs/holiProd.webp";
+import anna from "../imgs/annadristi.webp";
 import Footer from "../components/Footer";
 import { motion, useScroll, Variants } from "framer-motion"
 

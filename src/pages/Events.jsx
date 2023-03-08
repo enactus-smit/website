@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
-import rangDerun from "../imgs/rangderun.jpeg";
-import ecoHues from "../imgs/holiProd.jpeg";
-import clothDon from "../imgs/clothDon.jpeg";
+import rangDerun from "../imgs/rangderun.webp";
+import ecoHues from "../imgs/holiProd.webp";
+import clothDon from "../imgs/clothDon.webp";
 
 const Events = () => {
   return (
