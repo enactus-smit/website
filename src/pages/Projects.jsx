@@ -31,6 +31,13 @@ const Projects = () => {
       <article className="flex flex-col mx-8 md:mx-16">
 
         {/*Holi Section */}
+        <motion.div
+      className="word-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+      viewport={{ once: true }}
+      >
       
         <section className="flex-col">
           <h1
@@ -76,6 +83,7 @@ const Projects = () => {
             </div>
           </div>
         </section>
+        </motion.div>
 
         {/*Anna dristi section*/}
       <motion.div
@@ -83,6 +91,7 @@ const Projects = () => {
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      viewport={{ once: true }}
       >
         <section className="flex-col mt-10">
           <h1

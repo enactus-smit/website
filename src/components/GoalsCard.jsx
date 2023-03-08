@@ -11,6 +11,7 @@ const cardVariants = {
     y: 0,
     opacity: 1,
     transition: {
+      type: "spring",
       duration: 0.8
     }
   }
@@ -25,6 +26,7 @@ const GoalsCard = (props) => {
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      viewport={{ once: true }}
       >
         <div
           className="bg-[#ffffffd5] rounded-3xl shadow-lg h-auto w-[300px] mx-auto p-6

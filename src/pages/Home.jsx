@@ -54,10 +54,18 @@ const Home = () => {
 
       {/*About us */}
       <article className="mx-8 md:mx-16">
+      <motion.div
+      className="word-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+      viewport={{ once: true }}
+      >
         <section className="relative flex flex-col mt-10">
           <div className="flex justify-center mb-10">
             {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
-            <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold">
+            <h1 className="whitespace-nowrap text-[3rem] md:text-[3.5rem] bg-gradient-to-r lg:text-[5.2rem] font-semibold
+            text-gray-800">
               Who We Are
             </h1>
             {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
@@ -89,6 +97,7 @@ const Home = () => {
           </div>
         </div>
         </section>
+        </motion.div>
 
         {/*Enactus word break */}
         <motion.div
@@ -96,6 +105,7 @@ const Home = () => {
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      viewport={{ once: true }}
       >
         <section className="flex-col w-full h-auto bg-white border-4 border-yellow-400 rounded-lg mt-20
         border-x-[20px] md:border-x-[80px]">
@@ -122,11 +132,12 @@ const Home = () => {
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      viewport={{ once: true }}
       >
         <section className="flex-col w-full h-auto pb-4 mt-20">
           <div className="flex justify-center mb-10">
           {/*} <img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20" /> */}
-            <h1 className=" whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold">
+            <h1 className=" whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[5.2rem] font-semibold text-gray-800">
               Testimonials
             </h1>
             {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
