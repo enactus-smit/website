@@ -13,6 +13,7 @@ const Header = () => {
   const routeChange = useCallback(
     (path) => {
       navigate(path);
+      window.scrollTo(0, 0);
     },
     [navigate]
   );
