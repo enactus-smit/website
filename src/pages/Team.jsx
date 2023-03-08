@@ -4,13 +4,13 @@ import {
   TeamCard,
   TeamNameCard,
 } from "../components/TeamCard";
-import Aryan from "../imgs/Aryan.png";
-import Kunal from "../imgs/Kunal.png";
-import Namrata from "../imgs/Namrata.png";
-import Yash from "../imgs/Yash.png";
-import Ahana from "../imgs/Ahana.png";
-import Aditya from "../imgs/Aditya.png";
-import Sir from "../imgs/Bikash_sir.png";
+import Aryan from "../imgs/Aryan.webp";
+import Kunal from "../imgs/Kunal.webp";
+import Namrata from "../imgs/Namrata.webp";
+import Yash from "../imgs/Yash.webp";
+import Ahana from "../imgs/Ahana.webp";
+import Aditya from "../imgs/Aditya.webp";
+import Sir from "../imgs/Bikash_sir.webp";
 import Footer from "../components/Footer";
 
 const Team = () => {

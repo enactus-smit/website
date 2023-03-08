@@ -1,7 +1,6 @@
 import React from "react";
-import encSmit from "../imgs/enactus banner.png";
+import encSmit from "../imgs/enactus banner.webp";
 import encTran from "../imgs/Enactus_Full_Color_logo.png";
-import encRib from "../imgs/encribbon.png";
 import { Testimonial } from "../components/Testimonial";
 import Footer from "../components/Footer";
 import { motion, useScroll, Variants } from "framer-motion"
