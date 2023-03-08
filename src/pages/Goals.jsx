@@ -120,7 +120,8 @@ const Goals = () => {
   return (
     <div className="h-screen">
       <div>
-        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
+        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
+        text-gray-800">
           Our Goals
         </h1>
       </div>

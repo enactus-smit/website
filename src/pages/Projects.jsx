@@ -2,11 +2,30 @@ import React from "react";
 import holiProd from "../imgs/holiProd.jpeg";
 import anna from "../imgs/annadristi.jpeg";
 import Footer from "../components/Footer";
+import { motion, useScroll, Variants } from "framer-motion"
+
+
+const cardVariants = {
+  offscreen: {
+    y: 100,
+    opacity: 0
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 1.5
+    }
+  }
+};
 
 const Projects = () => {
   return (
     <div className="h-screen">
-      <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
+      <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
+      text-gray-800">
         Our Projects
       </h1>
       <article className="flex flex-col mx-8 md:mx-16">
@@ -59,7 +78,12 @@ const Projects = () => {
         </section>
 
         {/*Anna dristi section*/}
-
+      <motion.div
+      className="anna-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+      >
         <section className="flex-col mt-10">
           <h1
             className="inline-block whitespace-nowrap text-[2.5rem] md:text-[3rem] lg:text-[4.2rem] font-bold
@@ -100,11 +124,12 @@ const Projects = () => {
             </div>
           </div>
         </section>
-
+        </motion.div>
       </article>
       <div className="flex-1 mx-8 md:mx-16">
           <Footer />
-        </div>
+      </div>
+      
     </div>
   );
 };

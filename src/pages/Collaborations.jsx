@@ -6,7 +6,8 @@ import Footer from "../components/Footer";
 const Collaborations = () => {
   return (
     <div>
-      <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold">
+      <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
+      text-gray-800">
         Collaborations
       </h1>
       <div className="grid md:grid-cols-2 grid-cols-1 lg:justify-evenly px-10 ">

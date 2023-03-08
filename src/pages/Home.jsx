@@ -4,16 +4,51 @@ import encTran from "../imgs/Enactus_Full_Color_logo.png";
 import encRib from "../imgs/encribbon.png";
 import { Testimonial } from "../components/Testimonial";
 import Footer from "../components/Footer";
+import { motion, useScroll, Variants } from "framer-motion"
+
+
+const cardVariants = {
+  offscreen: {
+    y: 100,
+    opacity: 0
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.5
+    }
+  }
+};
+
+const testimonialVar = {
+  offscreen: {
+  //  x: 100,
+    scale: 0.9,
+    opacity: 0
+  },
+  onscreen: {
+  //  x: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      duration: 1.5,
+      
+    }
+  }
+};
 
 const Home = () => {
   return (
     <main className="relative h-screen w-screen">
       {/*top banner*/}
-      <div className=" h-auto w-screen">
+      <div className=" h-auto w-screen flex">
         <img
           src={encSmit}
           alt="banner"
-          width={2000}
+          width={8000}
           height={800}
         />
       </div>
@@ -57,7 +92,12 @@ const Home = () => {
         </section>
 
         {/*Enactus word break */}
-
+        <motion.div
+      className="word-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+      >
         <section className="flex-col w-full h-auto bg-white border-4 border-yellow-400 rounded-lg mt-20
         border-x-[20px] md:border-x-[80px]">
           <article className="flex-col w-[50%] mx-auto my-10">
@@ -75,9 +115,15 @@ const Home = () => {
             </div>
           </article>
         </section>
+      </motion.div>
 
         {/*testimonials*/}
-
+        <motion.div
+      className="testi-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+      >
         <section className="flex-col w-full h-auto pb-4 mt-20">
           <div className="flex justify-center mb-10">
           {/*} <img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20" /> */}
@@ -86,6 +132,12 @@ const Home = () => {
             </h1>
             {/*<img src={encRib} width={100} height={20} alt="rib" className="h-16 w-20"  /> */}
           </div>
+          <motion.div
+          className="review-container"
+          initial="offscreen"
+          whileInView="onscreen"
+          variants={testimonialVar}
+          >
           <main className="grid md:grid-cols-2 gap-4 md:gap-10">
             <Testimonial
               heading="Highlight heading"
@@ -121,7 +173,9 @@ const Home = () => {
               desig="Survey Team"
             />
           </main>
+          </motion.div>
         </section>
+        </motion.div>
         <div className="">
           <Footer />
         </div>

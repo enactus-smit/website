@@ -10,7 +10,7 @@ const Contact = () => {
           <img src={sideImg} alt="side_img" />
         </div>
         <div className="flex flex-col w-full mt-6 bg-[#ffffffbd] p-8 rounded-3xl">
-          <h1 className="flex justify-center text-[3rem] font-semibold">
+          <h1 className="flex justify-center text-[3rem] font-semibold text-gray-800">
             Contact Us
           </h1>
           <p className="flex justify-center text-lg font-medium">

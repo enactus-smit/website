@@ -13,7 +13,7 @@
     body {
         overflow-x: hidden;
         font-family: 'Source Sans Pro', sans-serif;
-        background-image: url("../src/imgs/site_bg.png");
+        background-image: url("../src/imgs/site_bg.webp");
         background-color: #f3f3f3;
         background-repeat: repeat;
         background-position: center;
