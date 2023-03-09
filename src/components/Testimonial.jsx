@@ -26,7 +26,7 @@ export const Testimonial = (props) => {
                     </div>
                 </div>
             <figcaption className="font-medium">
-                <h3 className="text-orange-600 font-semibold text-lg">
+                <h3 className="text-gray-900 font-semibold text-lg">
                     {name}
                 </h3>
                 <div className="text-amber-600">
