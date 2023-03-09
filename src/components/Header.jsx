@@ -5,17 +5,19 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const [active, setActive] = useState(1);
   const [isOpen, setIsOpen] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
   const navigate = useNavigate();
 
   //funtion for route changing
   const routeChange = useCallback(
-    (path) => {
+    (num,path) => {
       navigate(path);
       window.scrollTo(0, 0);
+      setActive(num);
     },
-    [navigate]
+    [navigate,setActive]
   );
 
   //funtion for menu button in small screens
@@ -59,27 +61,28 @@ const Header = () => {
         <ul
           className="hidden md:flex md:px-2 lg:px-6 space-x-6 font-semibold text-md
           lg:space-x-12">
-          <li className="nav-item " onClick={() => routeChange("/")}>
+          <li className={`${active === 1 ? ' text-yellow-400 ' : 'nav-item '} `} onClick={() =>routeChange(1,"/")}>
             Home
           </li>
-          <li className="nav-item " onClick={() => routeChange("/team")}>
+          <li onClick={() =>routeChange(2,"/team")} className={`${active === 2 ? ' text-yellow-400 ' : 'nav-item '} `} >
             Team 2022-2023
           </li>
-          <li className="nav-item " onClick={() => routeChange("/events")}>
+          <li className={`${active === 3 ? ' text-yellow-400 ' : 'nav-item'} `} onClick={() =>{routeChange(3,"/events")}}>
+            {console.log(active)}
             Events
           </li>
-          <li className="nav-item " onClick={() => routeChange("/projects")}>
+          <li className={`${active === 4 ? ' text-yellow-400 ' : 'nav-item'} `} onClick={() =>{routeChange(4,"/projects")}}>
             Our Projects
           </li>
-          <li className="nav-item " onClick={() => routeChange("/goals")}>
+          <li className={`${active === 5 ? ' text-yellow-400 ' : 'nav-item'} `} onClick={() =>{routeChange(5,"/goals")}}>
             Our Goals
           </li>
-          <li className="nav-item " onClick={() => routeChange("/contact")}>
+          <li className={`${active === 6 ? ' text-yellow-400 ' : 'nav-item'} `} onClick={() =>{routeChange(6,"/contact")}}>
             Contact Us
           </li>
           <li
-            className="nav-item "
-            onClick={() => routeChange("/collaborations")}>
+            className={`${active === 7 ? ' text-yellow-400 ' : 'nav-item'} `}
+            onClick={() =>{routeChange(7,"/")}}>
             Collaborations
           </li>
         </ul>
