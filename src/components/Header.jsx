@@ -85,7 +85,7 @@ const Header = () => {
           </li>
           <li
             className={`${active === 7 ? ' text-yellow-400 ' : 'nav-item'} `}
-            onClick={() =>{routeChange(7,"/")}}>
+            onClick={() =>{routeChange(7,"/collaborations")}}>
             Collaborations
           </li>
         </ul>
