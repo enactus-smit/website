@@ -135,7 +135,7 @@ const Projects = () => {
         </section>
         </motion.div>
       </article>
-      <div className="flex-1 mx-8 md:mx-16">
+      <div className="flex-1">
           <Footer />
       </div>
       

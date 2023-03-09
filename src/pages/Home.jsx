@@ -186,10 +186,10 @@ const Home = () => {
           </motion.div>
         </section>
         </motion.div>
-        <div className="">
-          <Footer />
-        </div>
       </article>
+      <div className="">
+          <Footer />
+      </div>
     </main>
   );
 };

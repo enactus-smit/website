@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <div className="w-auto">
-      <section className="grid grid-cols-1 md:grid-cols-2 w-full h-auto md:pr-10">
+    <div className="h-screen w-auto">
+      <section className="grid grid-cols-1 md:grid-cols-2 w-full md:pr-10 h-screen mb-10">
         <div className="grid h-full w-full place-content-center">
           <img src={sideImg} alt="side_img" />
         </div>
@@ -33,7 +33,7 @@ const Contact = () => {
           </form>
         </div>
       </section>
-      <div className="mx-10 mt-10">
+      <div className="flex-1">
         <Footer />
       </div>
     </div>

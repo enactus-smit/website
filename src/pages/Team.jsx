@@ -104,35 +104,35 @@ const Team = () => {
 				Our Team
 			</h1>
 
-			<div className="flex flex-col">
-				<div className="flex flex-wrap justify-center">
-					{presidentsTeachers.map((presidentTeacher) => (
-						<PresidentTeacherCard
-							name={presidentTeacher.name}
-							image={presidentTeacher.image}
-						/>
-					))}
-				</div>
-				<div className="flex flex-wrap justify-center">
-					{teams.map((team) => (
-						<TeamCard name={team.name} image={team.image} />
-					))}
-				</div>
-				<div className="flex flex-wrap justify-center">
-					{teamNames.map((teamName) => (
-						<TeamNameCard
-							name={teamName.name}
-							members={teamName.members}
-							director={teamName.director}
-						/>
-					))}
-				</div>
-			</div>
-			<div className="mx-8 md:mx-20">
-				<Footer />
-			</div>
-		</div>
-	);
+      <div className="flex flex-col">
+        <div className="flex flex-wrap justify-center">
+          {presidentsTeachers.map((presidentTeacher) => (
+            <PresidentTeacherCard
+              name={presidentTeacher.name}
+              image={presidentTeacher.image}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center">
+          {teams.map((team) => (
+            <TeamCard name={team.name} image={team.image} />
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center">
+          {teamNames.map((teamName) => (
+            <TeamNameCard
+              name={teamName.name}
+              members={teamName.members}
+              director={teamName.director}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="flex-1">
+        <Footer />
+      </div>
+    </div>
+  );
 };
 
 export default Team;

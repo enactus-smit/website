@@ -185,7 +185,7 @@ const Events = () => {
           </div>
         </div>
       </section>
-      <div className="mx-8 md:mx-20 flex-1">
+      <div className="flex-1">
         <Footer />
       </div>
     </div>

@@ -149,7 +149,7 @@ const Goals = () => {
           />
         ))}
       </div>
-      <div className="mx-8 md:mx-20">
+      <div className="flex-1">
         <Footer />
       </div>
     </div>
