@@ -3,9 +3,12 @@ import logo from "../imgs/Enactus_Full_Color_logo.png";
 import logoSmit from "../imgs/smit_logo.png";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
+import usePersistedState from 'use-persisted-state';
+
 
 const Header = () => {
-  const [active, setActive] = useState(1);
+  const useActive = usePersistedState('active');
+  const [active, setActive] = useActive('state-key-101',1);
   const [isOpen, setIsOpen] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);
   const navigate = useNavigate();
