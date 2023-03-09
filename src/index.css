@@ -33,5 +33,5 @@
 }
 
 .input-boxes{
-    @apply p-2 rounded-lg focus:!outline-4 !outline-yellow-400 ring-4 ring-yellow-400 required:ring-red-600;
+    @apply p-2 rounded-lg focus:!outline-4 !outline-gray-700 ring-4 ring-gray-400 required:ring-red-600;
 }
