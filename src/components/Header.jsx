@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col w-auto justify-between overflow-hidden pt-7 bg-white z-50 ">
-      <div className="flex justify-between mx-16 mb-4">
+      <div className="flex justify-between mx-4 md:mx-16 mb-4">
         <img
           className=""
           width={110}
@@ -45,7 +45,12 @@ const Header = () => {
           src={logo}
           alt="logo-enactus"
         />
-        <img width={180} height={200} src={logoSmit} alt="logo-smit" />
+        <img className="invisible md:visible"
+        width={180} 
+        height={200} 
+        src={logoSmit} 
+        alt="logo-smit"
+         />
         {/*nav button*/}
 
         <div
