@@ -1,22 +1,23 @@
 import React from "react";
-import first from "../imgs/1.png";
-import second from "../imgs/2.png";
-import third from "../imgs/3.png";
-import fourth from "../imgs/4.png";
-import fifth from "../imgs/5.png";
-import sixth from "../imgs/6.png";
-import seventh from "../imgs/7.png";
-import eighth from "../imgs/8.png";
-import ninth from "../imgs/9.png";
-import tenth from "../imgs/10.png";
-import eleventh from "../imgs/11.png";
-import twth from "../imgs/12.png";
-import tith from "../imgs/13.png";
-import fth from "../imgs/14.png";
-import fifteenth from "../imgs/15.png";
-import sixteenth from "../imgs/16.png";
-import seventeenth from "../imgs/17.png";
+import first from "../imgs/1.webp";
+import second from "../imgs/2.webp";
+import third from "../imgs/3.webp";
+import fourth from "../imgs/4.webp";
+import fifth from "../imgs/5.webp";
+import sixth from "../imgs/6.webp";
+import seventh from "../imgs/7.webp";
+import eighth from "../imgs/8.webp";
+import ninth from "../imgs/9.webp";
+import tenth from "../imgs/10.webp";
+import eleventh from "../imgs/11.webp";
+import twth from "../imgs/12.webp";
+import tith from "../imgs/13.webp";
+import fth from "../imgs/14.webp";
+import fifteenth from "../imgs/15.webp";
+import sixteenth from "../imgs/16.webp";
+import seventeenth from "../imgs/17.webp";
 import GoalsCard from "../components/GoalsCard";
+import Footer from "../components/Footer";
 
 const sdgs = [
   {
@@ -31,22 +32,22 @@ const sdgs = [
   },
   {
     name: "Ensure healthy lives and promote well-being for all at all ages",
-    img: third ,
+    img: third,
     url: "https://www.un.org/sustainabledevelopment/health/",
   },
   {
     name: "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
-    img: fourth ,
+    img: fourth,
     url: "https://www.un.org/sustainabledevelopment/education/",
   },
   {
     name: "Achieve gender equality and empower all women and girls",
-    img: fifth ,
+    img: fifth,
     url: "https://www.un.org/sustainabledevelopment/gender-equality/",
   },
   {
     name: "Ensure availability and sustainable management of water and sanitation for all",
-    img: sixth ,
+    img: sixth,
     url: "https://www.un.org/sustainabledevelopment/water-and-sanitation/",
   },
   {
@@ -56,7 +57,7 @@ const sdgs = [
   },
   {
     name: "Promote sustained, inclusive and sustainable economic growth, full and productive employment, and decent work for all",
-    img:  eighth,
+    img: eighth,
     url: "https://www.un.org/sustainabledevelopment/economic-growth/",
   },
   {
@@ -92,36 +93,52 @@ const sdgs = [
   {
     title: "Life Below Water",
     name: "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
-    img: fth ,
+    img: fth,
     url: "https://www.un.org/sustainabledevelopment/oceans/",
   },
   {
     title: "Life on Land",
     name: "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
-    img: fifteenth ,
+    img: fifteenth,
     url: "https://www.un.org/sustainabledevelopment/biodiversity/",
   },
   {
     title: "Peace, Justice and Strong Institutions",
     name: "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels",
-    img: sixteenth ,
+    img: sixteenth,
     url: "https://www.un.org/sustainabledevelopment/peace-justice/",
   },
   {
     title: "Partnerships for the Goals",
     name: "Strengthen the means of implementation and revitalize the global partnership for sustainable development",
-    img:  seventeenth ,
+    img: seventeenth,
     url: "https://www.un.org/sustainabledevelopment/global-partnerships/",
   },
 ];
 
 const Goals = () => {
   return (
-    <>
+    <div className="h-screen">
       <div>
-        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold text-gray-900">Our Goals</h1>
+        <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
+        text-gray-800">
+          Our Goals
+        </h1>
       </div>
-      <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center  ">
+      <div className=" bg-[#ffffffd5] rounded-3xl shadow-lg w-[70%] mx-auto px-6 ">
+        <article className="text-justify md:text-[1.2rem] lg:text-[1.5rem] text-gray-900 font-medium indent-20 mt-8 leading-relaxed py-4">
+          We at Enactus SMIT strive to develop an environment of
+          entrepreneurship and innovation for the students of today, to help
+          them create a better and more sustainable world of tomorrow. Orur
+          organization coordinates our vision of the future with the 17
+          Sustainable Development Goals as suggested by the United Nations
+          Organization. We also continuously collaborate and cooperate with
+          businesses, markets, and the local population when carrying out our
+          regular tasks and even in our projects to form an amicable
+          relationship for our future endeavors.
+        </article>
+      </div>
+      <div className=" relative flex px-4  flex-wrap  mx-auto items-center flex-row justify-center">
         {sdgs.map((goal, img, index) => (
           <GoalsCard
             key={index}
@@ -132,7 +149,10 @@ const Goals = () => {
           />
         ))}
       </div>
-    </>
+      <div className="flex-1">
+        <Footer />
+      </div>
+    </div>
   );
 };
 
