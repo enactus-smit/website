@@ -111,37 +111,37 @@ const Header = () => {
             onClick={toggleMenu}>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/")}>
+              onClick={() => routeChange(1,"/")}>
               Home
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/team")}>
+              onClick={() => routeChange(2,"/team")}>
               Team 2022-2023
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/events")}>
+              onClick={() => routeChange(3,"/events")}>
               Events
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/projects")}>
+              onClick={() => routeChange(4,"/projects")}>
               Our Projects
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/goals")}>
+              onClick={() => routeChange(5,"/goals")}>
               Our Goals
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/contact")}>
+              onClick={() => routeChange(6,"/contact")}>
               Contact Us
             </li>
             <li
               className="text-gray-800 hover:text-black cursor-pointer duration-700"
-              onClick={() => routeChange("/collaborations")}>
+              onClick={() => routeChange(7,"/collaborations")}>
               Collaborations
             </li>
           </ul>
