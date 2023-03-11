@@ -60,13 +60,13 @@ const Team = () => {
 			members: ["Ayusmaan Panigrahi ", "Gamin Ghaley", "Soheli Das"],
 		},
 		{
-			name: "Engagement",
-			director: "Gunjan Chakrabartty",
+			name: "Tech ",
+			director: ,
 			members: [
 				"Abhinav Anand",
 				"Abhrajit ray",
 				"Asmita Mukherjee",
-				"Nishita Dutta",
+		
 			],
 		},
 		{
@@ -84,14 +84,17 @@ const Team = () => {
 			name: "Event Management",
 			director: "Rythem Goyal",
 			members: [
+				
 				"Anauksa Das",
 				"Arpan Ari",
 				"Devratna",
+				"Gunjan Chakrabartty"
 				"Indraneel",
 				"Jatin Karki",
 				"Koustabh Das",
 				"Neelvie Chhetri",
 				"Nikita Kar",
+				"Nishita Dutta",
 				"Rheah Pundi",
 			],
 		},
