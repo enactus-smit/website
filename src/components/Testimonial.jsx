@@ -2,7 +2,6 @@ import React from 'react'
 
 export const Testimonial = (props) => {
 
-    let heading = props.heading
     let subHeading = props.subHeading
     let path = props.path
     let name = props.name
