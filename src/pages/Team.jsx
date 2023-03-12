@@ -50,11 +50,6 @@ const Team = () => {
 
 	const teamNames = [
 		{
-			name: "Tech ",
-			director: "Abhrajit ray",
-			members: ["Abhinav Anand", "Asmita Mukherjee"],
-		},
-		{
 			name: "Outreach",
 			director: "Achintya Sharma",
 			members: ["Adrija Chakrabarti", "Kusangla Lepcha", "Torsha Guha"],
@@ -64,7 +59,11 @@ const Team = () => {
 			director: "Suryasnato Mitra",
 			members: ["Ayusmaan Panigrahi ", "Gamin Ghaley", "Soheli Das"],
 		},
-
+		{
+			name: "Tech ",
+			director: "Abhrajit ray",
+			members: ["Abhinav Anand", "Asmita Mukherjee"],
+		},
 		{
 			name: "Media & Communications",
 			director: "Jatin Sharma",
