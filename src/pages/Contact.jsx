@@ -1,8 +1,21 @@
 import React from "react";
 import sideImg from "../imgs/Enactus_Full_Color_logo.png"
 import Footer from "../components/Footer";
+import emailjs from 'emailjs-com';
+
+
 
 const Contact = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_w4amlqa', 'template_wo05cyo', e.target, 'VrKfzXOm8ncv0mPPfTlp6')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
   return (
     <div className="h-screen w-auto">
       <section className="grid grid-cols-1 md:grid-cols-2 w-full md:pr-10 mb-10">
@@ -36,7 +49,7 @@ const Contact = () => {
                 className="pb-36 p-2 rounded-lg ring-4 ring-gray-400 outline-4 !outline-gray-700"
               ></input>
             </div>
-            <button className="bg-yellow-400 w-[30%] p-3 mx-auto rounded-md hover:bg-yellow-500">
+            <button onSubmit={sendEmail}className="bg-yellow-400 w-[30%] p-3 mx-auto rounded-md hover:bg-yellow-500">
               Submit
             </button>
           </form>
