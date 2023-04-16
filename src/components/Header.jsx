@@ -1,12 +1,30 @@
-import React, { useCallback, useState } from "react";
-import logo from "../imgs/Enactus_Full_Color_logo.png";
-import logoSmit from "../imgs/smit_logo.png";
+import React, { useCallback, useState, useEffect } from "react";
+// import logo from "../imgs/Enactus_Full_Color_logo.png";
+// import logoSmit from "../imgs/smit_logo.png";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 import usePersistedState from 'use-persisted-state';
+import { storage } from '../firebase';
+import {  ref, getDownloadURL} from 'firebase/storage';
+
 
 
 const Header = () => {
+  const [logo, setlogo] = useState([]);
+
+	useEffect(() => {
+	  
+	
+
+	const logoRefs = [
+		ref(storage, "images/Enactus_Full_Color_logo.png"),
+		ref(storage, "images/smit_logo.png"),
+		
+	  ];
+	  Promise.all(logoRefs.map(getDownloadURL))
+		.then((urls) => setlogo(urls))
+		.catch((error) => console.log(error));
+	}, []);
   const useActive = usePersistedState('active');
   const [active, setActive] = useActive('state-key-101',1);
   const [isOpen, setIsOpen] = useState(false);
@@ -42,13 +60,13 @@ const Header = () => {
           className=""
           width={110}
           height={100}
-          src={logo}
+          src={logo[0]}
           alt="logo-enactus"
         />
         <img className="invisible md:visible"
         width={180} 
         height={200} 
-        src={logoSmit} 
+        src={logo[1]} 
         alt="logo-smit"
          />
         {/*nav button*/}

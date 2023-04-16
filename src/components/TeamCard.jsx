@@ -60,7 +60,7 @@ const TeamCard = (props) => (
 	</motion.div>
 );
 
-const TeamNameCard = ({ name, members, director }) => {
+const TeamNameCard = ({ name, members, director , }, ) => {
 	return (
 		<motion.div
 			className="word-container"
@@ -74,7 +74,7 @@ const TeamNameCard = ({ name, members, director }) => {
 				</div>
 				<div className="text-lg font-semibold pt-2 ">{director}</div>
 				<ul>
-					{members.map((member) => (
+					{members.map((member ,) => (
 						<li className="mb-2">{member} </li>
 					))}
 				</ul>

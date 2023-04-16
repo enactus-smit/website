@@ -1,50 +1,74 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import {
 	PresidentTeacherCard,
 	TeamCard,
 	TeamNameCard,
 } from "../components/TeamCard";
-import Aditya from "../imgs/Aditya.webp";
-import Ahana from "../imgs/Ahana.webp";
-import Aryan from "../imgs/Aryan.webp";
-import Sir from "../imgs/Bikash_sir.webp";
-import Kunal from "../imgs/Kunal.webp";
-import Namrata from "../imgs/Namrata.webp";
-import Yash from "../imgs/Yash.webp";
+import { storage } from '../firebase';
+import {  ref, getDownloadURL} from 'firebase/storage';
+
+
+
 
 const Team = () => {
+	const [presidentTeacherImages, setPresidentTeacherImages] = useState([]);
+	const [teamImages, setTeamImages] = useState([]);
+
+	useEffect(() => {
+	  const imageRefs = [
+		ref(storage, "images/Bikash_sir.webp"),
+		ref(storage, "images/Aryan.webp"),
+		
+	  ];
+	  Promise.all(imageRefs.map(getDownloadURL))
+		.then((urls) => setPresidentTeacherImages(urls))
+		.catch((error) => console.log(error));
+	
+
+	const teamImageRefs = [
+		ref(storage, "images/Kunal.webp"),
+		ref(storage, "images/Namrata.webp"),
+		ref(storage, "images/Yash.webp"),
+		ref(storage, "images/Aditya.webp"),
+		ref(storage, "images/Ahana.webp"),
+	  ];
+	  Promise.all(teamImageRefs.map(getDownloadURL))
+		.then((urls) => setTeamImages(urls))
+		.catch((error) => console.log(error));
+	}, []);
 	const presidentsTeachers = [
+		
 		{
 			name: "Teacher",
-			image: Sir,
+			image: presidentTeacherImages[0],
 		},
 		{
 			name: "President",
-			image: Aryan,
+			image:  presidentTeacherImages[1],
 		},
 	];
 
 	const teams = [
 		{
 			name: "Vice Precident",
-			image: Kunal,
+			image: teamImages[0],
 		},
 		{
 			name: "Head of Operations",
-			image: Namrata,
+			image: teamImages[1],
 		},
 		{
 			name: "Vice President of Finance ",
-			image: Yash,
+			image: teamImages[2],
 		},
 		{
 			name: "Vice President of Events ",
-			image: Aditya,
+			image: teamImages[3],
 		},
 		{
 			name: "Vice President of Media and Communications ",
-			image: Ahana,
+			image:teamImages[4],
 		},
 	];
 
@@ -93,6 +117,8 @@ const Team = () => {
 			],
 		},
 	];
+
+
 	return (
 		<div className="h-screen">
 			<h1
@@ -104,24 +130,27 @@ const Team = () => {
 
 			<div className="flex flex-col">
 				<div className="flex flex-wrap justify-center">
-					{presidentsTeachers.map((presidentTeacher) => (
+					{presidentsTeachers.map((presidentTeacher , index) => (
 						<PresidentTeacherCard
+						key={index}
 							name={presidentTeacher.name}
 							image={presidentTeacher.image}
 						/>
 					))}
 				</div>
 				<div className="flex flex-wrap justify-center">
-					{teams.map((team) => (
-						<TeamCard name={team.name} image={team.image} />
+					{teams.map((team, index) => (
+						<TeamCard name={team.name} key={index} image={team.image} />
 					))}
 				</div>
 				<div className="flex flex-wrap justify-center">
-					{teamNames.map((teamName) => (
+					{teamNames.map((teamName, index) => (
 						<TeamNameCard
 							name={teamName.name}
 							members={teamName.members}
 							director={teamName.director}
+							id={teamName.id}
+							key={index}
 						/>
 					))}
 				</div>

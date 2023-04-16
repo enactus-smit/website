@@ -13,7 +13,8 @@
     body {
         overflow-x: hidden;
         font-family: 'Source Sans Pro', sans-serif;
-        background-image: url("../src/imgs/site_bg.webp");
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/dnajsd-f03e4.appspot.com/o/images%2Fsite_bg.webp?alt=media&token=99b29fd0-77a4-4656-a16b-92b22a1ebc7c");
+
         background-color: #f3f3f3;
         background-repeat: repeat;
         background-position: center;
