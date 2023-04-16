@@ -1,38 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Footer from "../components/Footer";
-import emailjs from 'emailjs-com';
-import { storage } from '../firebase';
-import {  ref, getDownloadURL} from 'firebase/storage';
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
+import emailjs from "@emailjs/browser";
 
-
-
-
+//enactus
+//service_w4amlqa', 'template_wo05cyo'
 
 const Contact = () => {
   const [Enactuslogo, setEnactuslogo] = useState([]);
 
-	useEffect(() => {
-	  
-	
+  useEffect(() => {
+    const logoRefs = [ref(storage, "images/Enactus_Full_Color_logo.png")];
+    Promise.all(logoRefs.map(getDownloadURL))
+      .then((urls) => setEnactuslogo(urls))
+      .catch((error) => console.log(error));
+  }, []);
 
-	const logoRefs = [
-		ref(storage, "images/Enactus_Full_Color_logo.png"),
-		
-	  ];
-	  Promise.all(logoRefs.map(getDownloadURL))
-		.then((urls) => setEnactuslogo(urls))
-		.catch((error) => console.log(error));
-	}, []);
-  function sendEmail(e) {
+  //emailjs driver code
+  const form = useRef(null);
+
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_w4amlqa', 'template_wo05cyo', e.target, 'VrKfzXOm8ncv0mPPfTlp6')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+    emailjs
+      .sendForm(
+        "service_1kh0mfc",
+        "template_ruqunb5",
+        form.current,
+        "5244NKrk1aiva-Nyj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Message not sent!");
+        }
+      );
+  };
+
   return (
     <div className="h-screen w-auto">
       <section className="grid grid-cols-1 md:grid-cols-2 w-full md:pr-10 mb-10">
@@ -46,27 +55,50 @@ const Contact = () => {
           <p className="flex justify-center text-lg font-medium">
             Feel free to send us your valuable feedback!
           </p>
-          <form className="flex flex-col h-auto w-auto space-y-12 mt-10 md:px-10 lg:px-20">
+
+          {/*Make sure that the name values are same as those in the email template*/}
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col h-auto w-auto space-y-12 mt-10 md:px-10 lg:px-20"
+          >
             <div className="flex flex-col space-y-2">
               <label className="text-lg font-medium">Name: </label>
-              <input placeholder="Name *" className="input-boxes"></input>
+              <input
+                placeholder="Name *"
+                name="name"
+                className="input-boxes"
+              ></input>
             </div>
             <div className="flex flex-col space-y-2">
               <label className="text-lg font-medium">E-mail: </label>
-              <input placeholder="E-mail *" className="input-boxes "></input>
+              <input
+                placeholder="E-mail *"
+                name="email"
+                className="input-boxes "
+              ></input>
             </div>
             <div className="flex flex-col space-y-2">
               <label className="text-lg font-medium">Subject: </label>
-              <input placeholder="Subject *" className="input-boxes"></input>
+              <input
+                placeholder="Subject *"
+                name="subject"
+                className="input-boxes"
+              ></input>
             </div>
             <div className="flex flex-col space-y-2">
               <label className="text-lg font-medium">Message: </label>
               <input
                 placeholder="Type your message here *"
+                name="message"
                 className="pb-36 p-2 rounded-lg ring-4 ring-gray-400 outline-4 !outline-gray-700"
               ></input>
             </div>
-            <button onSubmit={sendEmail}className="bg-yellow-400 w-[30%] p-3 mx-auto rounded-md hover:bg-yellow-500">
+            <button
+              type="submit"
+              value="send"
+              className="bg-yellow-400 w-[30%] p-3 mx-auto rounded-md hover:bg-yellow-500"
+            >
               Submit
             </button>
           </form>
