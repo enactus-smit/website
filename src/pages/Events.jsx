@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import rangDerun from "../imgs/rangderun.webp";
-import ecoHues from "../imgs/holiProd.webp";
-import clothDon from "../imgs/clothDon.webp";
+import { storage } from '../firebase';
+import {  ref, getDownloadURL} from 'firebase/storage';
 
 const Events = () => {
+  const [EventImages, setEventImages] = useState([]);
+
+	useEffect(() => {
+	  
+	
+
+	const logoRefs = [
+		ref(storage, "images/clothDon.webp"),
+		ref(storage, "images/holiProd.webp"),
+		ref(storage, "images/rangderun.webp"),
+		
+	  ];
+	  Promise.all(logoRefs.map(getDownloadURL))
+		.then((urls) => setEventImages(urls))
+		.catch((error) => console.log(error));
+	}, []);
   return (
     <div className="h-screen">
       <section>
@@ -55,7 +70,7 @@ const Events = () => {
                       </span>
                       <img
                       className="rounded-2xl w-56 ml-auto"
-                      src={clothDon}
+                      src={EventImages[0]}
                       alt="cloth donation"
                        />
                       <br/>
@@ -93,7 +108,7 @@ const Events = () => {
                       </span>
                       <img
                       className="w-56 rounded-2xl"
-                      src={ecoHues}
+                      src={EventImages[1]}
                       alt="ecohues"
                        />
                       <br/>
@@ -168,7 +183,7 @@ const Events = () => {
                       </span>
                       <img
                       className="w-56 rounded-2xl"
-                      src={rangDerun}
+                      src={EventImages[2]}
                       alt="Rang De Runway"
                        />
                       <br/>

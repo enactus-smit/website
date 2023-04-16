@@ -1,122 +1,140 @@
-import React from "react";
-import first from "../imgs/1.webp";
-import second from "../imgs/2.webp";
-import third from "../imgs/3.webp";
-import fourth from "../imgs/4.webp";
-import fifth from "../imgs/5.webp";
-import sixth from "../imgs/6.webp";
-import seventh from "../imgs/7.webp";
-import eighth from "../imgs/8.webp";
-import ninth from "../imgs/9.webp";
-import tenth from "../imgs/10.webp";
-import eleventh from "../imgs/11.webp";
-import twth from "../imgs/12.webp";
-import tith from "../imgs/13.webp";
-import fth from "../imgs/14.webp";
-import fifteenth from "../imgs/15.webp";
-import sixteenth from "../imgs/16.webp";
-import seventeenth from "../imgs/17.webp";
+import React, { useEffect, useState } from "react";
 import GoalsCard from "../components/GoalsCard";
 import Footer from "../components/Footer";
+import { storage } from '../firebase';
+import {  ref, getDownloadURL} from 'firebase/storage';
 
-const sdgs = [
-  {
-    img: first,
-    url: "https://www.un.org/sustainabledevelopment/poverty/",
-    name: "End poverty in all its forms everywhere",
-  },
-  {
-    name: "End hunger, achieve food security and improved nutrition, and promote sustainable agriculture",
-    img: second,
-    url: "https://www.un.org/sustainabledevelopment/hunger/",
-  },
-  {
-    name: "Ensure healthy lives and promote well-being for all at all ages",
-    img: third,
-    url: "https://www.un.org/sustainabledevelopment/health/",
-  },
-  {
-    name: "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
-    img: fourth,
-    url: "https://www.un.org/sustainabledevelopment/education/",
-  },
-  {
-    name: "Achieve gender equality and empower all women and girls",
-    img: fifth,
-    url: "https://www.un.org/sustainabledevelopment/gender-equality/",
-  },
-  {
-    name: "Ensure availability and sustainable management of water and sanitation for all",
-    img: sixth,
-    url: "https://www.un.org/sustainabledevelopment/water-and-sanitation/",
-  },
-  {
-    name: "Ensure access to affordable, reliable, sustainable and modern energy for all",
-    img: seventh,
-    url: "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
-  },
-  {
-    name: "Promote sustained, inclusive and sustainable economic growth, full and productive employment, and decent work for all",
-    img: eighth,
-    url: "https://www.un.org/sustainabledevelopment/economic-growth/",
-  },
-  {
-    title: "Industry, Innovation and Infrastructure",
-    name: "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
-    img: ninth,
-    url: "https://www.un.org/sustainabledevelopment/infrastructure-industrialization/",
-  },
-  {
-    // title: 'Reduced Inequalities',
-    name: "Reduce inequality within and among countries",
-    img: tenth,
-    url: "https://www.un.org/sustainabledevelopment/inequality/",
-  },
-  {
-    title: "Sustainable Cities and Communities",
-    name: "Make cities and human settlements inclusive, safe, resilient and sustainable",
-    img: eleventh,
-    url: "https://www.un.org/sustainabledevelopment/cities/",
-  },
-  {
-    title: "Responsible Consumption and Production",
-    name: "Ensure sustainable consumption and production patterns",
-    img: twth,
-    url: "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
-  },
-  {
-    title: "Climate Action",
-    name: "Take urgent and ambitious action to combat climate change and its impacts",
-    img: tith,
-    url: "https://www.un.org/sustainabledevelopment/climate-action/",
-  },
-  {
-    title: "Life Below Water",
-    name: "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
-    img: fth,
-    url: "https://www.un.org/sustainabledevelopment/oceans/",
-  },
-  {
-    title: "Life on Land",
-    name: "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
-    img: fifteenth,
-    url: "https://www.un.org/sustainabledevelopment/biodiversity/",
-  },
-  {
-    title: "Peace, Justice and Strong Institutions",
-    name: "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels",
-    img: sixteenth,
-    url: "https://www.un.org/sustainabledevelopment/peace-justice/",
-  },
-  {
-    title: "Partnerships for the Goals",
-    name: "Strengthen the means of implementation and revitalize the global partnership for sustainable development",
-    img: seventeenth,
-    url: "https://www.un.org/sustainabledevelopment/global-partnerships/",
-  },
-];
 
 const Goals = () => {
+  const [GoalsImages, setGoalsImages] = useState([]);
+
+	useEffect(() => {
+	  
+	
+
+	const logoRefs = [
+    //if you are importing these images make sure 1.webp will be your "GoalImages[0]"
+		ref(storage, "images/1.webp"),
+		ref(storage, "images/2.webp"),
+		ref(storage, "images/3.webp"),
+		ref(storage, "images/4.webp"),
+		ref(storage, "images/5.webp"),
+		ref(storage, "images/6.webp"),
+		ref(storage, "images/7.webp"),
+		ref(storage, "images/8.webp"),
+		ref(storage, "images/9.webp"),
+		ref(storage, "images/10.webp"),
+		ref(storage, "images/11.webp"),
+		ref(storage, "images/12.webp"),
+		ref(storage, "images/13.webp"),
+		ref(storage, "images/14.webp"),
+		ref(storage, "images/15.webp"),
+		ref(storage, "images/16.webp"),
+		ref(storage, "images/17.webp"),
+		
+		
+	  ];
+	  Promise.all(logoRefs.map(getDownloadURL))
+		.then((urls) => setGoalsImages(urls))
+		.catch((error) => console.log(error));
+	}, []);
+
+  const sdgs = [
+    {
+      img: GoalsImages[0],
+      url: "https://www.un.org/sustainabledevelopment/poverty/",
+      name: "End poverty in all its forms everywhere",
+    },
+    {
+      name: "End hunger, achieve food security and improved nutrition, and promote sustainable agriculture",
+      img: GoalsImages[1],
+      url: "https://www.un.org/sustainabledevelopment/hunger/",
+    },
+    {
+      name: "Ensure healthy lives and promote well-being for all at all ages",
+      img: GoalsImages[2],
+      url: "https://www.un.org/sustainabledevelopment/health/",
+    },
+    {
+      name: "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+      img: GoalsImages[3],
+      url: "https://www.un.org/sustainabledevelopment/education/",
+    },
+    {
+      name: "Achieve gender equality and empower all women and girls",
+      img: GoalsImages[4],
+      url: "https://www.un.org/sustainabledevelopment/gender-equality/",
+    },
+    {
+      name: "Ensure availability and sustainable management of water and sanitation for all",
+      img: GoalsImages[5],
+      url: "https://www.un.org/sustainabledevelopment/water-and-sanitation/",
+    },
+    {
+      name: "Ensure access to affordable, reliable, sustainable and modern energy for all",
+      img: GoalsImages[6],
+      url: "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
+    },
+    {
+      name: "Promote sustained, inclusive and sustainable economic growth, full and productive employment, and decent work for all",
+      img: GoalsImages[7],
+      url: "https://www.un.org/sustainabledevelopment/economic-growth/",
+    },
+    {
+      title: "Industry, Innovation and Infrastructure",
+      name: "Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+      img: GoalsImages[8],
+      url: "https://www.un.org/sustainabledevelopment/infrastructure-industrialization/",
+    },
+    {
+      // title: 'Reduced Inequalities',
+      name: "Reduce inequality within and among countries",
+      img: GoalsImages[9],
+      url: "https://www.un.org/sustainabledevelopment/inequality/",
+    },
+    {
+      title: "Sustainable Cities and Communities",
+      name: "Make cities and human settlements inclusive, safe, resilient and sustainable",
+      img: GoalsImages[10],
+      url: "https://www.un.org/sustainabledevelopment/cities/",
+    },
+    {
+      title: "Responsible Consumption and Production",
+      name: "Ensure sustainable consumption and production patterns",
+      img: GoalsImages[11],
+      url: "https://www.un.org/sustainabledevelopment/sustainable-consumption-production/",
+    },
+    {
+      title: "Climate Action",
+      name: "Take urgent and ambitious action to combat climate change and its impacts",
+      img: GoalsImages[12],
+      url: "https://www.un.org/sustainabledevelopment/climate-action/",
+    },
+    {
+      title: "Life Below Water",
+      name: "Conserve and sustainably use the oceans, seas and marine resources for sustainable development",
+      img: GoalsImages[13],
+      url: "https://www.un.org/sustainabledevelopment/oceans/",
+    },
+    {
+      title: "Life on Land",
+      name: "Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+      img: GoalsImages[14],
+      url: "https://www.un.org/sustainabledevelopment/biodiversity/",
+    },
+    {
+      title: "Peace, Justice and Strong Institutions",
+      name: "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels",
+      img: GoalsImages[15],
+      url: "https://www.un.org/sustainabledevelopment/peace-justice/",
+    },
+    {
+      title: "Partnerships for the Goals",
+      name: "Strengthen the means of implementation and revitalize the global partnership for sustainable development",
+      img: GoalsImages[16],
+      url: "https://www.un.org/sustainabledevelopment/global-partnerships/",
+    },
+  ];
   return (
     <div className="h-screen">
       <div>

@@ -1,11 +1,28 @@
-import React from "react";
-import sideImg from "../imgs/Enactus_Full_Color_logo.png"
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import emailjs from 'emailjs-com';
+import { storage } from '../firebase';
+import {  ref, getDownloadURL} from 'firebase/storage';
+
+
 
 
 
 const Contact = () => {
+  const [Enactuslogo, setEnactuslogo] = useState([]);
+
+	useEffect(() => {
+	  
+	
+
+	const logoRefs = [
+		ref(storage, "images/Enactus_Full_Color_logo.png"),
+		
+	  ];
+	  Promise.all(logoRefs.map(getDownloadURL))
+		.then((urls) => setEnactuslogo(urls))
+		.catch((error) => console.log(error));
+	}, []);
   function sendEmail(e) {
     e.preventDefault();
 
@@ -20,7 +37,7 @@ const Contact = () => {
     <div className="h-screen w-auto">
       <section className="grid grid-cols-1 md:grid-cols-2 w-full md:pr-10 mb-10">
         <div className="grid h-full w-full place-content-center">
-          <img src={sideImg} alt="side_img" />
+          <img src={Enactuslogo} alt="side_img" />
         </div>
         <div className="flex flex-col w-full mt-6 bg-[#ffffffbd] p-8 rounded-3xl">
           <h1 className="flex justify-center text-[3rem] font-semibold text-gray-800">

@@ -1,9 +1,8 @@
-import React from "react";
-import holiProd from "../imgs/holiProd.webp";
-import anna from "../imgs/annadristi.webp";
 import Footer from "../components/Footer";
 import { motion, useScroll, Variants } from "framer-motion"
-
+import {storage} from '../firebase';
+import {  ref , getDownloadURL} from 'firebase/storage';
+import React, { useEffect, useState } from "react";
 
 const cardVariants = {
   offscreen: {
@@ -21,7 +20,25 @@ const cardVariants = {
   }
 };
 
+
+
 const Projects = () => {
+  const [projectImages, setprojectImages] = useState([]);
+  useEffect(() => {
+	  
+	
+
+	const projectImagesRefs = [
+    ref(storage, "images/holiProd.webp"),
+		ref(storage, "images/annadristi.webp"),
+		
+
+	  ];
+	  Promise.all(projectImagesRefs.map(getDownloadURL))
+		.then((urls) => setprojectImages(urls))
+		.catch((error) => console.log(error));
+	}, []);
+  
   return (
     <div className="h-screen">
       <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
@@ -53,7 +70,7 @@ const Projects = () => {
           >
             <img
               className="rounded-3xl lg:h-[600px]"
-              src={holiProd}
+              src={projectImages[0]}
               alt="product pic"
             />
             <div className="bg-[#ffffffd5] p-4 md:p-5 lg:p-8 rounded-3xl text-lg lg:text-2xl leading-relaxed text-slate-800
@@ -91,7 +108,9 @@ const Projects = () => {
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      
       viewport={{ once: true }}
+      
       >
         <section className="flex-col mt-10">
           <h1
@@ -101,14 +120,16 @@ const Projects = () => {
           >
             अन्न-Drishti
           </h1>
+         
           <div
             className="flex flex-col lg:flex-row md:flex-row py-5 md:space-x-4 lg:space-x-20 space-y-5
           md:space-y-0 md:h-[30rem] lg:h-auto"
           >
             <img
               className="rounded-3xl lg:h-[600px]"
-              src={anna}
+              src={projectImages[1]}
               alt="anna dristi"
+              
             />
             <div className="bg-[#ffffffd5] p-4 md:p-5 lg:p-8 rounded-3xl text-lg lg:text-2xl leading-relaxed text-slate-800
             font-semibold overflow-y-scroll !scrollbar-thin !scrollbar-thumb-rounded-lg !scrollbar-thumb-yellow-400">
