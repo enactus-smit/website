@@ -8,7 +8,7 @@ const Footer = () => {
                     © 2023 Enactus-SMIT
                 <span className="ml-9"></span>All Rights Reserved.
                 </span>
-                <h2 className="mt-2 mb-2 whitespace-pre-wrap text-gray-700 font-semibold tracking-wide text-md">Developed by Abhrajit Ray and Kunal Sharma</h2>
+                <h2 className="mt-2 mb-2 whitespace-pre-wrap text-gray-700 font-semibold tracking-wide text-md">Developed by Abhrajit Ray, Kunal Sharma and Abhinav Anand</h2>
             </div>
             <div className="flex mt-4 space-x-6 sm:mt-0">
                 <a href="https://www.instagram.com/enactussmit/" className="text-gray-500 hover:text-white" target="_blank" rel="noopener noreferrer">
