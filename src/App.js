@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Goals from "./pages/Goals";
 import Contact from "./pages/Contact";
 import Collaborations from "./pages/Collaborations";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/goals" element={<Goals />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/collaborations" element={<Collaborations />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
   );
 }

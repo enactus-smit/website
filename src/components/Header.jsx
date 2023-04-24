@@ -111,6 +111,11 @@ const Header = () => {
             onClick={() =>{routeChange(7,"/collaborations")}}>
             Collaborations
           </li>
+          <li
+            className={`${active === 8 ? ' text-yellow-400 ' : 'nav-item'} `}
+            onClick={() =>{routeChange(8,"/gallery")}}>
+            Gallery
+          </li>
         </ul>
       </nav>
       {/*The bar*/}
@@ -162,6 +167,11 @@ const Header = () => {
               onClick={() => routeChange(7,"/collaborations")}>
               Collaborations
             </li>
+            <li
+            className={`${active === 8 ? ' text-yellow-400 ' : 'nav-item'} `}
+            onClick={() =>{routeChange(8,"/gallery")}}>
+            Gallery
+          </li>
           </ul>
         </nav>
       </div>
