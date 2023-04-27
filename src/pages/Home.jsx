@@ -207,7 +207,7 @@ const Home = () => {
                   Everyone's view and conviction to create a better and richer world which all of us constantly work towards."
                   path={HomeImages[5]}
                   name="Jatin Sharma"
-                  desig="Media and Communicaions"
+                  desig="Media and Communications"
                 />
               </main>
             </motion.div>
