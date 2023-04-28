@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Testimonial } from "../components/Testimonial";
 import Footer from "../components/Footer";
-import { motion, useScroll, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { storage } from "../firebase";
 import { getDownloadURL, ref } from "firebase/storage";
 

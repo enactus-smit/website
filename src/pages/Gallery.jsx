@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ImgCard from "../components/ImgCard";
 import { storage } from "../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
@@ -46,17 +46,17 @@ const Gallery = () => {
 			.catch((error) => console.log(error));
 	}, []);
 	return (
-		<div>
-			<h1
-				className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
-        text-gray-800">
-				Gallery
-			</h1>
-			<div className="grid-col-4">
-				<ImgCard img="" name="name" />
-			</div>
+		<div className="h-screen">
+		  <h1 className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold text-gray-800">
+			Gallery
+		  </h1>
+		  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+			{Images.map((url, index) => (
+			  <ImgCard key={index} img={url} name={`Image ${index + 1}`} />
+			))}
+		  </div>
 		</div>
-	);
+	  );
 };
 
 export default Gallery;

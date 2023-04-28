@@ -18,7 +18,7 @@ const cardVariants = {
 
 const ImgCard = (props) => {
   return (
-    <div className="flex flex-col p-10">
+    <div className="flex flex-col">
       <motion.div
         className="word-container"
         initial="offscreen"
@@ -29,7 +29,7 @@ const ImgCard = (props) => {
         <div className=" rounded-3xl shadow-lg h-auto w-[300px] mx-auto p-6">
           <img
             src={props.img}
-            className="mx-auto rounded-lg max-h-36"
+            className="mx-auto rounded-lg max-h-80"
             alt={props.name}
           />
         </div>
