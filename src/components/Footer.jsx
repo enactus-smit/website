@@ -1,9 +1,11 @@
 import React from "react";
+import ecell from "../assets/ecellsmit.webp";
 
 const Footer = () => {
   return (
     <footer className="rounded-xl p-4 justify-between shadow md:flex md:items-center md:p-6 bg-gray-100 border-4 border-yellow-400 mb-4">
-      <div className="flex flex-col font-semibold mx-auto">
+      <img className="hidden md:block" src={ecell} width={70} alt="ecellsmit" />
+      <div className="hidden md:flex md:flex-col font-semibold mx-auto">
         <span className=" whitespace-nowrap text-sm flex justify-center  text-gray-600">
           © 2023 Enactus-SMIT
           <span className="ml-9"></span>All Rights Reserved.
@@ -12,7 +14,8 @@ const Footer = () => {
           Developed by Abhrajit Ray, Kunal Sharma and Abhinav Anand
         </h2>
       </div>
-      <div className="flex mt-4 space-x-6 sm:mt-0">
+      <div className="flex md:mt-4 mt-0 justify-between items-center">
+        <div className="flex space-x-2  md:space-x-6">
         <a
           href="https://www.instagram.com/enactussmit/"
           className="text-gray-500 hover:text-gray-800"
@@ -45,6 +48,23 @@ const Footer = () => {
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
           </svg>
         </a>
+      </div>
+      <div className="md:hidden flex flex-col font-semibold mx-auto px-4 text-center">
+        <span className=" md:whitespace-nowrap text-sm flex justify-center  text-gray-600">
+          © 2023 Enactus-SMIT
+          <span className="ml-9"></span>All Rights Reserved.
+        </span>
+        <h2 className=" mx-auto mt-2 mb-2 whitespace-pre-wrap text-gray-700 font-semibold tracking-wide text-sm md:text-md
+        text-center">
+          Developed by Abhrajit Ray, Kunal Sharma and Abhinav Anand
+        </h2>
+      </div>
+        <img
+          className="block md:hidden"
+          src={ecell}
+          width={70}
+          alt="ecellsmit"
+        />
       </div>
     </footer>
   );
