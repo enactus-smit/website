@@ -5,47 +5,41 @@ import {
 	TeamCard,
 	TeamNameCard,
 } from "../components/TeamCard";
-import { storage } from '../firebase';
-import {  ref, getDownloadURL} from 'firebase/storage';
-
-
-
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 const Team = () => {
 	const [presidentTeacherImages, setPresidentTeacherImages] = useState([]);
 	const [teamImages, setTeamImages] = useState([]);
 
 	useEffect(() => {
-	  const imageRefs = [
-		ref(storage, "images/Bikash_sir.webp"),
-		ref(storage, "images/Aryan.webp"),
-		
-	  ];
-	  Promise.all(imageRefs.map(getDownloadURL))
-		.then((urls) => setPresidentTeacherImages(urls))
-		.catch((error) => console.log(error));
-	
+		const imageRefs = [
+			ref(storage, "images/Bikash_sir.webp"),
+			ref(storage, "images/Aryan.png"),
+		];
+		Promise.all(imageRefs.map(getDownloadURL))
+			.then((urls) => setPresidentTeacherImages(urls))
+			.catch((error) => console.log(error));
 
-	const teamImageRefs = [
-		ref(storage, "images/Kunal.webp"),
-		ref(storage, "images/Namrata.webp"),
-		ref(storage, "images/Yash.webp"),
-		ref(storage, "images/Aditya.webp"),
-		ref(storage, "images/Ahana.webp"),
-	  ];
-	  Promise.all(teamImageRefs.map(getDownloadURL))
-		.then((urls) => setTeamImages(urls))
-		.catch((error) => console.log(error));
+		const teamImageRefs = [
+			ref(storage, "images/Kunal.png"),
+			ref(storage, "images/Namrata.png"),
+			ref(storage, "images/Yash.webp"),
+			ref(storage, "images/Aditya.webp"),
+			ref(storage, "images/Ahana.png"),
+		];
+		Promise.all(teamImageRefs.map(getDownloadURL))
+			.then((urls) => setTeamImages(urls))
+			.catch((error) => console.log(error));
 	}, []);
 	const presidentsTeachers = [
-		
 		{
 			name: "Teacher",
 			image: presidentTeacherImages[0],
 		},
 		{
 			name: "President",
-			image:  presidentTeacherImages[1],
+			image: presidentTeacherImages[1],
 		},
 	];
 
@@ -68,7 +62,7 @@ const Team = () => {
 		},
 		{
 			name: "Vice President of Media and Communications ",
-			image:teamImages[4],
+			image: teamImages[4],
 		},
 	];
 
@@ -118,21 +112,19 @@ const Team = () => {
 		},
 	];
 
-
 	return (
 		<div className="h-screen">
 			<h1
 				className="flex justify-center whitespace-nowrap text-[3rem] md:text-[3.5rem] lg:text-[4.2rem] font-semibold
-      text-gray-800"
-			>
+      text-gray-800">
 				Our Team
 			</h1>
 
 			<div className="flex flex-col">
 				<div className="flex flex-wrap justify-center">
-					{presidentsTeachers.map((presidentTeacher , index) => (
+					{presidentsTeachers.map((presidentTeacher, index) => (
 						<PresidentTeacherCard
-						key={index}
+							key={index}
 							name={presidentTeacher.name}
 							image={presidentTeacher.image}
 						/>
@@ -140,7 +132,11 @@ const Team = () => {
 				</div>
 				<div className="flex flex-wrap justify-center">
 					{teams.map((team, index) => (
-						<TeamCard name={team.name} key={index} image={team.image} />
+						<TeamCard
+							name={team.name}
+							key={index}
+							image={team.image}
+						/>
 					))}
 				</div>
 				<div className="flex flex-wrap justify-center">
