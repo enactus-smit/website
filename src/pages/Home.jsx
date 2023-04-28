@@ -98,7 +98,8 @@ const Home = () => {
 									a framework to bring about a change and
 									create a better world for everyone. Enactus
 									SMIT is a newly formed chapter of this
-									global platform. Since our establishment in
+									global platform under the supervision of
+									E-Cell SMIT. Since our establishment in
 									2022, we&apos;ve been actively working on
 									our first project
 									<span className="lg:text-[1.6rem] font-semibold">
