@@ -4,9 +4,6 @@ import { storage } from "../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 import emailjs from "@emailjs/browser";
 
-//enactus
-//service_w4amlqa', 'template_wo05cyo'
-
 const Contact = () => {
   const [Enactuslogo, setEnactuslogo] = useState([]);
 
@@ -25,10 +22,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_1kh0mfc",
-        "template_ruqunb5",
+        "service_w4amlqa",
+        "template_yhxzv2d",
         form.current,
-        "5244NKrk1aiva-Nyj"
+        "25a9P0wrp0ctMM_sW"
       )
       .then(
         (result) => {
